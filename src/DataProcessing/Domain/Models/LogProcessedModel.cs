@@ -11,4 +11,8 @@ public class LogProcessedModel
         MLType = mlType;
         Content = content;
     }
+
+    internal LogProcessedModel()
+    {
+    }
 }

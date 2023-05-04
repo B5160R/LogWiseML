@@ -1,4 +1,9 @@
+using DataProcessing.Application.Commands.Interfaces;
+using DataProcessing.Application.Commands;
+using DataProcessing.Application.Dtos;
+using DataProcessing.Application.Repositories;
 using DataProcessing.Database.Context;
+using DataProcessing.Infrastructure.Repositories;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using SharedModels;
@@ -31,6 +36,10 @@ builder.Services.AddMassTransit(x =>
         config.ConfigureEndpoints(context);
     });
 });
+
+builder.Services.AddScoped<ILogProcessedRepository, LogProcessedRepository>();
+builder.Services.AddScoped<ICreateCommand<LogCreateRequestDto>, LogProcessedCreateCommand<LogCreateRequestDto>>();
+builder.Services.AddScoped<IProcessCommand<LogProcessRequestDto>, LogProcessCommand<LogProcessRequestDto>>();
 
 var app = builder.Build();
 

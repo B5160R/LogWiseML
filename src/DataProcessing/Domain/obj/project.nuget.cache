@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JNX7fSDJ4fJzUNfucHkSfMTJy2AEnpb7EChRf+dsBvXMhhUrdLO+ZMbioPmSVhnt3O91mKjjIpY2kETJsdnD3g==",
+  "dgSpecHash": "iyJGT1N8J2vtG5tnmO1uTN6yOL6gVkyhW9eCzZ6de/BTJzqioM59tVhvSynkrbGmm6cuE6sqOchY8qeNxFJhOQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataProcessing\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataProcessing\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
