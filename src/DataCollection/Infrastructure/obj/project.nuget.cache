@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UHmkMWZj1BJvR2TeJclyx0vOGQfenSjHw0Q94qEkVUhAUCevM/6S3uG/TiKutSV3A6eyV8qay0rwlRZN++1zRQ==",
+  "dgSpecHash": "x7MCPCu2+cu5gS3jqmOZ7+sWgD2R2IlB160XaTqO2+gnIPeL1deceFqh7UGwnBMuvgYFdxSuKdya5bcDo9EMxQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\freid\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.5\\microsoft.data.sqlite.core.7.0.5.nupkg.sha512",
     "C:\\Users\\freid\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.5\\microsoft.entityframeworkcore.7.0.5.nupkg.sha512",

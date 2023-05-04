@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vcZshSLX5I7TY3Eu8R/aDUr6qsF3p5oI01+pblqoH22pv2KilST5WF/5/cE1fp8iJzC9dbMEXu1NAgURKmEZOQ==",
+  "dgSpecHash": "XuTdmh9cL05gUvd80lZV7lq0IJgxrUYts1O/FX5LPX5VTi3L/x30SWA7Dqfi77X/Y9UENGKXHLTtH2lUSi5xKw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Database\\Migrations\\Migrations.csproj",
+  "projectFilePath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Database\\Migrations\\Migrations.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\freid\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\freid\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.5\\microsoft.data.sqlite.core.7.0.5.nupkg.sha512",

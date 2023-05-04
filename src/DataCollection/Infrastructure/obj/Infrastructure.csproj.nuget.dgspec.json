@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Infrastructure\\Infrastructure.csproj": {}
+    "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Application\\Application.csproj": {
+    "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Application\\Application.csproj",
+        "projectUniqueName": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Application\\Application.csproj",
+        "projectPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\freid\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Application\\obj\\",
+        "outputPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\freid\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Domain\\Domain.csproj"
+              "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Domain\\Domain.csproj": {
+                "projectPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Domain\\Domain.csproj"
               }
             }
           }
@@ -61,14 +61,14 @@
         }
       }
     },
-    "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Database\\Context\\Context.csproj": {
+    "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Database\\Context\\Context.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Database\\Context\\Context.csproj",
+        "projectUniqueName": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Database\\Context\\Context.csproj",
         "projectName": "Context",
-        "projectPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Database\\Context\\Context.csproj",
+        "projectPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Database\\Context\\Context.csproj",
         "packagesPath": "C:\\Users\\freid\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Database\\Context\\obj\\",
+        "outputPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Database\\Context\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\freid\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -83,8 +83,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Domain\\Domain.csproj"
+              "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Domain\\Domain.csproj": {
+                "projectPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Domain\\Domain.csproj"
               }
             }
           }
@@ -134,14 +134,14 @@
         }
       }
     },
-    "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Domain\\Domain.csproj": {
+    "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Domain\\Domain.csproj",
+        "projectUniqueName": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Domain\\Domain.csproj",
+        "projectPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\freid\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Domain\\obj\\",
+        "outputPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\freid\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -187,14 +187,14 @@
         }
       }
     },
-    "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Infrastructure\\Infrastructure.csproj": {
+    "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\freid\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Infrastructure\\obj\\",
+        "outputPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\freid\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -209,14 +209,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Application\\Application.csproj"
+              "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Application\\Application.csproj": {
+                "projectPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Application\\Application.csproj"
               },
-              "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Database\\Context\\Context.csproj": {
-                "projectPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Database\\Context\\Context.csproj"
+              "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Database\\Context\\Context.csproj": {
+                "projectPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Database\\Context\\Context.csproj"
               },
-              "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Domain\\Domain.csproj"
+              "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Domain\\Domain.csproj": {
+                "projectPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Domain\\Domain.csproj"
               }
             }
           }

@@ -848,6 +848,22 @@
           "bin/placeholder/Domain.dll": {}
         }
       },
+      "Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Application": "1.0.0",
+          "Context": "1.0.0",
+          "Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.5"
+        },
+        "compile": {
+          "bin/placeholder/Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Infrastructure.dll": {}
+        }
+      },
       "Migrations/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -2220,6 +2236,11 @@
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
     },
+    "Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Infrastructure/Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
+    },
     "Migrations/1.0.0": {
       "type": "project",
       "path": "../Database/Migrations/Migrations.csproj",
@@ -2236,6 +2257,7 @@
       "Application >= 1.0.0",
       "Context >= 1.0.0",
       "Domain >= 1.0.0",
+      "Infrastructure >= 1.0.0",
       "MassTransit >= 8.0.15",
       "MassTransit.RabbitMQ >= 8.0.15",
       "Microsoft.AspNetCore.OpenApi >= 7.0.3",
@@ -2251,11 +2273,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataProcessing\\API\\API.csproj",
+      "projectUniqueName": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataProcessing\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataProcessing\\API\\API.csproj",
+      "projectPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataProcessing\\API\\API.csproj",
       "packagesPath": "C:\\Users\\freid\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataProcessing\\API\\obj\\",
+      "outputPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataProcessing\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\freid\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -2270,20 +2292,23 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataProcessing\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataProcessing\\Application\\Application.csproj"
+            "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataProcessing\\Application\\Application.csproj": {
+              "projectPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataProcessing\\Application\\Application.csproj"
             },
-            "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataProcessing\\Database\\Context\\Context.csproj": {
-              "projectPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataProcessing\\Database\\Context\\Context.csproj"
+            "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataProcessing\\Database\\Context\\Context.csproj": {
+              "projectPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataProcessing\\Database\\Context\\Context.csproj"
             },
-            "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataProcessing\\Database\\Migrations\\Migrations.csproj": {
-              "projectPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataProcessing\\Database\\Migrations\\Migrations.csproj"
+            "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataProcessing\\Database\\Migrations\\Migrations.csproj": {
+              "projectPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataProcessing\\Database\\Migrations\\Migrations.csproj"
             },
-            "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataProcessing\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataProcessing\\Domain\\Domain.csproj"
+            "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataProcessing\\Domain\\Domain.csproj": {
+              "projectPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataProcessing\\Domain\\Domain.csproj"
             },
-            "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\SharedModels\\SharedModels.csproj": {
-              "projectPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\SharedModels\\SharedModels.csproj"
+            "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataProcessing\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataProcessing\\Infrastructure\\Infrastructure.csproj"
+            },
+            "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\SharedModels\\SharedModels.csproj": {
+              "projectPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\SharedModels\\SharedModels.csproj"
             }
           }
         }

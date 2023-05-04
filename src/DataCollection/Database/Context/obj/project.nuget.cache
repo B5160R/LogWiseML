@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w9KSu9NCufIWHQIo6kXkB0wh/IBrH1mewmYeBUjmCgnA/zQxnSvDMxdiAxX7iJXvhV4Yov5SV2+yWjvExGG2pg==",
+  "dgSpecHash": "0GKA7swIDaiS0lQBi49YSUXk88gsEyDJlZmzkmTqqsZEQ+i0SOym0AIKU/8ngQ930vTs9sh4eN6kD3oqeqSuqQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Database\\Context\\Context.csproj",
+  "projectFilePath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Database\\Context\\Context.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\freid\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\freid\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.5\\microsoft.data.sqlite.core.7.0.5.nupkg.sha512",

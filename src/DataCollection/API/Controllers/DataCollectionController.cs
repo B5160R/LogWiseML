@@ -49,9 +49,9 @@ public class DataCollectionController : ControllerBase
         try
         {
             _createCommand.Create(new LogCreateRequestDto { Content = Content });
-            var test = new LogCreated { Content = Content };
+            var test = new LogRaw { Content = Content };
             
-            await _publishEndpoint.Publish<LogCreated>(test);
+            await _publishEndpoint.Publish<LogRaw>(test);
             return Ok();
         }
         catch (Exception ex)

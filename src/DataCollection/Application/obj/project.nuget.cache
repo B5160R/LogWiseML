@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4AlBkA3A32Sis3C213Hx/OOEbNxrDR8PgO1BRjccUMHabABfHixJOxi56LuEZQBqbKbgNjBv6j+RziuOqU1aJw==",
+  "dgSpecHash": "YrSwClTtAUGWH2GEPJ/mQoSVXTFi3KNUkDWTaRIEeCDKBI1ZxzKZfEMCFdbM+na8QUAhzVctqPVziAMgXokQHg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataCollection\\Application\\Application.csproj",
+  "projectFilePath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataCollection\\Application\\Application.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

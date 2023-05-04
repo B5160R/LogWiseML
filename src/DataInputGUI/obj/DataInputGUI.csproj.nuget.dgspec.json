@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataInputGUI\\DataInputGUI.csproj": {}
+    "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataInputGUI\\DataInputGUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataInputGUI\\DataInputGUI.csproj": {
+    "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataInputGUI\\DataInputGUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataInputGUI\\DataInputGUI.csproj",
+        "projectUniqueName": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataInputGUI\\DataInputGUI.csproj",
         "projectName": "DataInputGUI",
-        "projectPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataInputGUI\\DataInputGUI.csproj",
+        "projectPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataInputGUI\\DataInputGUI.csproj",
         "packagesPath": "C:\\Users\\freid\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataInputGUI\\obj\\",
+        "outputPath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataInputGUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\freid\\AppData\\Roaming\\NuGet\\NuGet.Config"

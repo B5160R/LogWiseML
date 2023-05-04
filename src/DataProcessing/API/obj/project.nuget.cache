@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ne/hCG+NkVq/pvUDMgKBaI0XU+goZd+jN2W7hpP3vFD69f9dlFx++k9dzDtQnkNSD6idTkmLlIX6I7rNdExFDw==",
+  "dgSpecHash": "SOy0DqCT+aesJkugCVUK1kv02vTl+0hXpymnXRa26+H8hJ3WClh13Eh9cW8z9B1BRnQkEM8g97XWZJ5/uHJc3Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\SIEM\\DataProcessing\\API\\API.csproj",
+  "projectFilePath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataProcessing\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\freid\\.nuget\\packages\\masstransit\\8.0.15\\masstransit.8.0.15.nupkg.sha512",
     "C:\\Users\\freid\\.nuget\\packages\\masstransit.abstractions\\8.0.15\\masstransit.abstractions.8.0.15.nupkg.sha512",
