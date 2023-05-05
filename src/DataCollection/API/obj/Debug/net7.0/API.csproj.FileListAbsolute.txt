@@ -83,3 +83,6 @@ C:\Users\freid\Documents\Datamatiker\4. Semester\Projects\SIEM\DataCollection\AP
 C:\Users\freid\Documents\Datamatiker\4. Semester\Projects\SIEM\DataCollection\API\bin\Debug\net7.0\MassTransit.RabbitMqTransport.dll
 C:\Users\freid\Documents\Datamatiker\4. Semester\Projects\SIEM\DataCollection\API\bin\Debug\net7.0\SharedModels.dll
 C:\Users\freid\Documents\Datamatiker\4. Semester\Projects\SIEM\DataCollection\API\bin\Debug\net7.0\SharedModels.pdb
+C:\Users\freid\Documents\Datamatiker\4. Semester\Projects\LogWiseML\src\DataCollection\API\obj\Debug\net7.0\API.dll
+C:\Users\freid\Documents\Datamatiker\4. Semester\Projects\LogWiseML\src\DataCollection\API\obj\Debug\net7.0\refint\API.dll
+C:\Users\freid\Documents\Datamatiker\4. Semester\Projects\LogWiseML\src\DataCollection\API\obj\Debug\net7.0\API.pdb

@@ -19,7 +19,7 @@ services:
     image: dcapi
     build:
       context: .
-      dockerfile: DataCollection/Dockerfile
+      dockerfile: src/DataCollection/Dockerfile
     ports:
       - 5026:5026
     environment:
@@ -31,7 +31,7 @@ services:
     image: dpapi
     build:
       context: .
-      dockerfile: DataProcessing/Dockerfile
+      dockerfile: src/DataProcessing/Dockerfile
     ports:
       - 5027:5027
     environment:

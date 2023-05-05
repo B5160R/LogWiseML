@@ -11,7 +11,7 @@ public class LogModel
     {
         Content = content;
     }
-
+    
     internal LogModel()
     {
     }

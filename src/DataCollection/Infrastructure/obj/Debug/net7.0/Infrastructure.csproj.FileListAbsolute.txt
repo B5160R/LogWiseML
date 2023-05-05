@@ -17,3 +17,6 @@ C:\Users\freid\Documents\Datamatiker\4. Semester\Projects\SIEM\DataCollection\In
 C:\Users\freid\Documents\Datamatiker\4. Semester\Projects\SIEM\DataCollection\Infrastructure\obj\Debug\net7.0\refint\Infrastructure.dll
 C:\Users\freid\Documents\Datamatiker\4. Semester\Projects\SIEM\DataCollection\Infrastructure\obj\Debug\net7.0\Infrastructure.pdb
 C:\Users\freid\Documents\Datamatiker\4. Semester\Projects\SIEM\DataCollection\Infrastructure\obj\Debug\net7.0\ref\Infrastructure.dll
+C:\Users\freid\Documents\Datamatiker\4. Semester\Projects\LogWiseML\src\DataCollection\Infrastructure\obj\Debug\net7.0\Infrastructure.dll
+C:\Users\freid\Documents\Datamatiker\4. Semester\Projects\LogWiseML\src\DataCollection\Infrastructure\obj\Debug\net7.0\refint\Infrastructure.dll
+C:\Users\freid\Documents\Datamatiker\4. Semester\Projects\LogWiseML\src\DataCollection\Infrastructure\obj\Debug\net7.0\Infrastructure.pdb

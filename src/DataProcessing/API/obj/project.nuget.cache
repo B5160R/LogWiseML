@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9KXv4eNQPIOL8jrE/wVIE5V/2aoLr0CLomlYPTyLHUe7LlDJHXEQW6DTR0DF7SIm/Tko1J9SGswKvyxNgX8Etg==",
+  "dgSpecHash": "sGT2+BkX/plUTNjZWaIq40Ca5+JuEm1wQJW+eUDfc1+o/CgANoIoTOmvmrnX5qciw1/qFB0vgKFOKQeoYSbqlg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataProcessing\\API\\API.csproj",
+  "projectFilePath": "c:\\Users\\freid\\Documents\\Datamatiker\\4. Semester\\Projects\\LogWiseML\\src\\DataProcessing\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\freid\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\freid\\.nuget\\packages\\masstransit\\8.0.15\\masstransit.8.0.15.nupkg.sha512",

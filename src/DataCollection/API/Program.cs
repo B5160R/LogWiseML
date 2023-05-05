@@ -47,6 +47,7 @@ builder.Services.AddMassTransit(x =>
 builder.Services.AddScoped<ILogRepository, LogRepository>();
 builder.Services.AddScoped<IGetAllQuery<IEnumerable<LogQueryResultDto>>, LogGetAllQuery>();
 builder.Services.AddScoped<ICreateCommand<LogCreateRequestDto>, LogCreateCommand<LogCreateRequestDto>>();
+builder.Services.AddScoped<ILogParserCommand, LogParserCommand>();
 
 
 var app = builder.Build();
