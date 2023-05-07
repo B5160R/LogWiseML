@@ -1,4 +1,4 @@
-namespace SharedModels;
+namespace Shared.Settings;
 public class RabbitMqConsts
 {
     public const string Host = "rabbitmq";

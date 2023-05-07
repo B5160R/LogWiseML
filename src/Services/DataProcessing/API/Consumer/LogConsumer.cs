@@ -1,5 +1,5 @@
 using MassTransit;
-using SharedModels;
+using Shared.Models.Logs;
 
 public class LogConsumer : IConsumer<LogRaw>
 {

@@ -6,7 +6,7 @@ using DataProcessing.Database.Context;
 using DataProcessing.Infrastructure.Repositories;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
-using SharedModels;
+using Shared.Settings;
 
 var builder = WebApplication.CreateBuilder(args);
 

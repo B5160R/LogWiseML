@@ -5,7 +5,6 @@ using MassTransit;
 using Json.Net;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SharedModels;
 
 namespace API.Controllers;
 

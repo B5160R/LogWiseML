@@ -14,7 +14,7 @@ using DataCollection.Application.Dtos;
 using Microsoft.EntityFrameworkCore;
 using RabbitMQ.Client;
 using MassTransit;
-using SharedModels;
+using Shared.Settings;
 
 var builder = WebApplication.CreateBuilder(args);
 
