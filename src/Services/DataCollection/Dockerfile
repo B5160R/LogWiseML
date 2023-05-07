@@ -13,7 +13,7 @@ ENV ASPNETCORE_URLS=http://+:5026
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["src/Services/DataCollection", "DataCollection"]
-COPY ["src/Services/SharedModels", "SharedModels"]
+COPY ["src/Services/Shared", "Shared"]
 RUN dotnet restore "DataCollection/API/API.csproj"
 COPY . .
 WORKDIR "/src/DataCollection/API"
