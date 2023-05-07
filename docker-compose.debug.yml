@@ -31,7 +31,7 @@ services:
     image: dpapi
     build:
       context: .
-      dockerfile: src/Services/DataProcessing/Dockerfile
+      dockerfile: src/ServicesDataProcessing/Dockerfile
     ports:
       - 5027:5027
     environment:

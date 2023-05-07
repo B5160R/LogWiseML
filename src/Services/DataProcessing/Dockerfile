@@ -12,7 +12,8 @@ ENV ASPNETCORE_URLS=http://+:5157
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["DataProcessing/API/API.csproj", "DataProcessing/API/"]
+COPY ["src/Services/DataProcessing", "DataProcessing"]
+COPY ["src/Services/SharedModels", "SharedModels"]
 RUN dotnet restore "DataProcessing/API/API.csproj"
 COPY . .
 WORKDIR "/src/DataProcessing/API"
