@@ -38,8 +38,7 @@ builder.Services.AddMassTransit(x =>
 });
 
 builder.Services.AddScoped<ILogProcessedRepository, LogProcessedRepository>();
-builder.Services.AddScoped<ICreateCommand<LogCreateRequestDto>, LogProcessedCreateCommand<LogCreateRequestDto>>();
-builder.Services.AddScoped<IProcessCommand<LogProcessRequestDto>, LogProcessCommand<LogProcessRequestDto>>();
+builder.Services.AddScoped<ICreateCommand<LogProcessRequestDto>, LogProcessedCreateCommand<LogProcessRequestDto>>();
 
 var app = builder.Build();
 

@@ -24,7 +24,7 @@
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
     <ProjectReference Include="..\Database\Migrations\Migrations.csproj" />
     <ProjectReference Include="..\Database\Context\Context.csproj" />
-    <ProjectReference Include="..\..\Shared\Shared.csproj" />
+    <ProjectReference Include="..\..\..\Shared\Shared.csproj" />
   </ItemGroup>
 
 </Project>

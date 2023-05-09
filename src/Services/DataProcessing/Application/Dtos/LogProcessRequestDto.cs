@@ -3,8 +3,9 @@ public class LogProcessRequestDto
 {
     public int Id { get; private set; }
     public string Content { get; private set; }
-    public LogProcessRequestDto(string content)
+    public LogProcessRequestDto(int id, string content)
     {
+        Id = id;
         Content = content;
     }
 }

@@ -5,6 +5,6 @@ using DataCollection.Domain.Models;
 namespace DataCollection.Application.Repositories;
 public interface ILogRepository
 {
-    Task CreateAsync(LogModel entity);
+    Task<LogQueryResultDto> CreateAsync(LogModel entity);
     IEnumerable<LogQueryResultDto> GetAllAsync();
 }

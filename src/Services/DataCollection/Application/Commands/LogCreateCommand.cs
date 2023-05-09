@@ -9,21 +9,15 @@ namespace DataCollection.Application.Commands;
 public class LogCreateCommand<T> : ICreateCommand<LogCreateRequestDto> where T : class
 {
     private readonly ILogRepository _repository;
-    private readonly ILogParserCommand _logParserCommand;
 
-    public LogCreateCommand(ILogRepository repository, ILogParserCommand logParserCommand)
+    public LogCreateCommand(ILogRepository repository)
     {
         _repository = repository;
-        _logParserCommand = logParserCommand;
     }
 
-    void ICreateCommand<LogCreateRequestDto>.Create(LogCreateRequestDto dto)
+    async Task<LogQueryResultDto> ICreateCommand<LogCreateRequestDto>.CreateAsync(LogCreateRequestDto dto)
     {
-        var separatedLogs = _logParserCommand.SeperateLogs(dto.Content);
-
-        foreach (var log in separatedLogs)
-        {
-            _repository.CreateAsync(new LogModel(log));
-        }
+        var returnDto = await _repository.CreateAsync(new LogModel(dto.Content));
+        return returnDto;
     }
 }

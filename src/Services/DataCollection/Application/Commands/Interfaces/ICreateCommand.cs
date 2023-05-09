@@ -1,9 +1,8 @@
-using System.Threading.Tasks;
-
+using DataCollection.Application.Dtos;
 namespace DataCollection.Application.Commands.Interfaces
 {
     public interface ICreateCommand<T>
     {
-        void Create(T dto);
+        Task<LogQueryResultDto> CreateAsync(T dto);
     }
 }

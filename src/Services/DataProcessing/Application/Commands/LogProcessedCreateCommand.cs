@@ -1,11 +1,21 @@
+using DataProcessing.Domain.Models;
 using DataProcessing.Application.Commands.Interfaces;
 using DataProcessing.Application.Dtos;
+using DataProcessing.Application.Repositories;
 
 namespace DataProcessing.Application.Commands;
-public class LogProcessedCreateCommand<T> : ICreateCommand<LogCreateRequestDto>
+public class LogProcessedCreateCommand<T> : ICreateCommand<LogProcessRequestDto>
 {
-    public void Create(LogCreateRequestDto dto)
+    private readonly ILogProcessedRepository _repository;
+    public LogProcessedCreateCommand(ILogProcessedRepository repository)
     {
-        throw new NotImplementedException();
+        _repository = repository;
+    }
+
+    public async Task Create(LogProcessRequestDto dto)
+    {
+        var entityProcessed = new LogProcessedModel(dto.Id, "MLType", dto.Content);
+        
+        await _repository.CreateAsync(entityProcessed);
     }
 }

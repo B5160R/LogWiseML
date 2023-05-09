@@ -15,6 +15,18 @@ services:
       - "5672:5672"
       - "15672:15672"
 
+  datainputgatewayapi:
+    image: datainputgatewayapi
+    build:
+      context: .
+      dockerfile: src\Gateways\DataInput\Dockerfile
+    ports:
+      - 5051:5051
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw
+
   dcapi:
     image: dcapi
     build:

@@ -1,3 +1,6 @@
+using MassTransit;
+using Shared.Settings;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +9,19 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddMassTransit(x =>
+{
+    x.UsingRabbitMq((context, config)=>
+    {
+        config.Host(RabbitMqConsts.Host, RabbitMqConsts.VirtualHost, h => 
+        {                        
+            h.Username(RabbitMqConsts.UserName);                        
+            h.Password(RabbitMqConsts.Password);
+        });
+        config.ConfigureEndpoints(context);
+    });
+});
 
 var app = builder.Build();
 

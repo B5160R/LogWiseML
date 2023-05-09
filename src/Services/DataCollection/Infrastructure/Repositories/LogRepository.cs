@@ -13,10 +13,17 @@ public class LogRepository : ILogRepository
         _context = context;
     }
 
-    public Task CreateAsync(LogModel entity)
+    public async Task<LogQueryResultDto> CreateAsync(LogModel entity)
     {
-        _context.Logs.Add(entity);
-        return _context.SaveChangesAsync();
+        await _context.Logs.AddAsync(entity);
+        await _context.SaveChangesAsync();
+        
+        var createdEnity = _context.Logs.AsNoTracking().OrderByDescending(e => e.Id).FirstOrDefault();
+         return new LogQueryResultDto
+        {
+            Id = createdEnity.Id,
+            Content = createdEnity.Content,
+        };
     }
 
     public IEnumerable<LogQueryResultDto> GetAllAsync()

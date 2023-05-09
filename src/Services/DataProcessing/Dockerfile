@@ -12,11 +12,11 @@ ENV ASPNETCORE_URLS=http://+:5157
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["src/Services/DataProcessing", "DataProcessing"]
-COPY ["src/Services/Shared", "Shared"]
-RUN dotnet restore "DataProcessing/API/API.csproj"
+COPY ["src/Services/DataProcessing", "Services/DataProcessing"]
+COPY ["src/Shared", "Shared"]
+RUN dotnet restore "Services/DataProcessing/API/API.csproj"
 COPY . .
-WORKDIR "/src/DataProcessing/API"
+WORKDIR "/src/Services/DataProcessing/API"
 RUN dotnet build "API.csproj" -c Release -o /app/build
 
 FROM build AS publish
