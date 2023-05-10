@@ -10,4 +10,8 @@
     <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
   
+  <ItemGroup>
+    <PackageReference Include="CSVHelper" Version="30.0.1" />
+  </ItemGroup>
+  
 </Project>

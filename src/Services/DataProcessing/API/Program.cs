@@ -7,6 +7,8 @@ using DataProcessing.Infrastructure.Repositories;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Shared.Settings;
+using DataProcessing.Application.Queries.Interfaces;
+using DataProcessing.Application.Queries;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,6 +41,8 @@ builder.Services.AddMassTransit(x =>
 
 builder.Services.AddScoped<ILogProcessedRepository, LogProcessedRepository>();
 builder.Services.AddScoped<ICreateCommand<LogProcessRequestDto>, LogProcessedCreateCommand<LogProcessRequestDto>>();
+builder.Services.AddScoped<IGetAllQuery<LogQueryResultDto>, LogsGetAllQuery>();
+builder.Services.AddScoped<IConvertToCSV<LogQueryResultDto>, LogsConvertToCSV>();
 
 var app = builder.Build();
 

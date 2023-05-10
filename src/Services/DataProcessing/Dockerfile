@@ -1,8 +1,8 @@
 FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
 WORKDIR /app
-EXPOSE 5157
+EXPOSE 5027
 
-ENV ASPNETCORE_URLS=http://+:5157
+ENV ASPNETCORE_URLS=http://+:5027
 
 # Creates a non-root user with an explicit UID and adds permission to access the /app folder
 # For more info, please refer to https://aka.ms/vscode-docker-dotnet-configure-containers

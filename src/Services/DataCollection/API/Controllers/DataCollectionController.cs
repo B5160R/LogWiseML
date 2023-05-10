@@ -29,7 +29,7 @@ public class DataCollectionController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<LogQueryResultDto> Get()
+    public IEnumerable<LogQueryResultDto> GetAll()
     {
         try
         {
