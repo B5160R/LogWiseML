@@ -28,7 +28,6 @@ while(run)
             
             System.Console.WriteLine("Connecting to LogWiseML API...");
             await apiConn.SendLogs(logs);
-            System.Console.WriteLine("Logs sent successfully!");
             break;
         case "3":
             System.Console.WriteLine("Running connections:");

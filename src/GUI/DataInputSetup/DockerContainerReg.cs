@@ -12,7 +12,6 @@ public class DockerContainerReg
 
     public async Task<string> GetLogsAsync(string dockerContainerId)
     {
-        
         _getDockerLogs.StartInfo.Arguments = $"logs {dockerContainerId}";
         _getDockerLogs.Start();
         string output = await _getDockerLogs.StandardOutput.ReadToEndAsync();

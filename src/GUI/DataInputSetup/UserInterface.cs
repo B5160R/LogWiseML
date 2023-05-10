@@ -3,15 +3,14 @@ public class UserInterface
 {
     public void WelcomeScreen()
     {
+        System.Console.Clear();
         System.Console.WriteLine(
     @"
             _____   ______ _  _  _ _____ _______ _______ _______       
     |      |     | |  ____ |  |  |   |   |______ |______ |  |  | |     
     |_____ |_____| |_____| |__|__| __|__ ______| |______ |  |  | |_____    
 
-    Data Stream Setup // Version 1.0
-    
-    ");
+    Data Stream Setup // Version 1.0");
     }
     public string Menu()
     {

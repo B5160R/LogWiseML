@@ -10,19 +10,28 @@ public class SendLogsToApi
 
     public async Task SendLogs(string logs)
     {
-        foreach(var log in logs.Split("/n"))
+        // Split logs by new line
+
+        // Send each log to the API
+        foreach(var log in logs.Split("\n"))
         {
-            var response = await _client.PostAsync("http://localhost:5026/datacollection",
-                                                new StringContent($"{{\"content\": \"{log}\"}}",
-                                                                    System.Text.Encoding.UTF8,
-                                                                    "application/json"));
+            var response = await _client.PostAsync("http://localhost:5051/api/DataInput",
+                                                    new StringContent($"{{\"content\": \"{log}\"}}",
+                                                                        System.Text.Encoding.UTF8,
+                                                                        "application/json"));
             if (response.IsSuccessStatusCode)
             {
-                System.Console.WriteLine("Log sent successfully");
+                System.Console.WriteLine(response.StatusCode);
             }
             else
             {
                 System.Console.WriteLine("Error sending log");
+                System.Console.WriteLine(response.StatusCode);
+                System.Console.WriteLine(response.ReasonPhrase);
+                System.Console.WriteLine(response.Content);
+                System.Console.WriteLine(response.Headers);
+                System.Console.WriteLine(response.RequestMessage);
+                System.Console.WriteLine(response.Version);
             }
         }
     }
