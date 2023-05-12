@@ -14,31 +14,27 @@ public class LogProcessedRepository : ILogProcessedRepository
         _context = context;
     }
     
-    public Task CreateAsync(LogProcessedModel entity)
+    public async Task CreateAsync(LogProcessedModel entity)
     {
-        try
-        {
-            _context.LogsProcessed.Add(entity);
-            return _context.SaveChangesAsync();
-        }
-        catch (Exception ex)
-        {
-            throw new Exception(ex.Message);
-        }
+            await _context.LogsProcessed.AddAsync(entity);
+            await _context.SaveChangesAsync();
     }
 
-    public IEnumerable<LogQueryResultDto> GetAll()
+    public async Task<IEnumerable<LogQueryResultDto>> GetAllAsync()
     {
-        foreach (var log in _context.LogsProcessed.AsNoTracking().ToList())
+        var logs = await _context.LogsProcessed.AsNoTracking().ToListAsync();
+        var dtoList = new List<LogQueryResultDto>();
+        foreach (var log in logs)
         {
-            yield return new LogQueryResultDto(log.Id, 
+            dtoList.Add( new LogQueryResultDto(log.Id, 
                                                log.MLType, 
                                                log.Timestamp, 
                                                log.LogMessage, 
                                                log.ExceptionType, 
                                                log.Error, 
                                                log.Warning, 
-                                               log.FaultyCodePlacement);
+                                               log.FaultyCodePlacement));
         }
+        return dtoList;
     }
 }

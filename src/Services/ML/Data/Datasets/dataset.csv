@@ -1,0 +1,160 @@
+Id,MLType,Timestamp,LogMessage,ExceptionType,Error,Warning,FaultyCodePlacement
+18,MLType,02/26/2023 10:53:39,info: Port 3000 is available (OK),No Exception,False,False,No Code Placement
+20,MLType,03/01/2023 17:20:47,info: All dependencies in ./package.json are satisfied (OK),No Exception,False,False,No Code Placement
+29,MLType,03/01/2023 17:22:03,info: Cheat score for trivial errorHandlingChallenge solved in 1min (expected ~0min) with hints allowed: 0,No Exception,True,False,No Code Placement
+30,MLType,03/01/2023 17:23:52,info: Cheat score for directoryListingChallenge solved in 2min (expected ~2min) with hints allowed: 0.08537499999999998,No Exception,False,False,No Code Placement
+31,MLType,03/01/2023 18:16:18,info: Cheat score for tutorial scoreBoardChallenge solved in 52min (expected ~1min) with hints allowed: 0,No Exception,False,False,No Code Placement
+32,MLType,03/01/2023 18:18:39,info: Cheat score for trivial tutorial privacyPolicyChallenge solved in 2min (expected ~0min) with hints allowed: 0,No Exception,False,False,No Code Placement
+33,MLType,03/01/2023 18:23:43,info: Cheat score for tutorial localXssChallenge solved in 5min (expected ~1min) with hints allowed: 0,No Exception,False,False,No Code Placement
+34,MLType,03/01/2023 17:20:50,info: Required file tutorial.js is present (OK),No Exception,False,False,No Code Placement
+35,MLType,03/13/2023 07:14:29,info: Restored 1-star scoreBoardChallenge (Score Board),No Exception,False,False,No Code Placement
+36,MLType,03/13/2023 07:14:29,info: Restored 1-star zeroStarsChallenge (Zero Stars),No Exception,False,False,No Code Placement
+37,MLType,03/13/2023 07:14:29,info: Restored 1-star missingEncodingChallenge (Missing Encoding),No Exception,False,False,No Code Placement
+38,MLType,03/13/2023 07:14:29,info: Restored 1-star xssBonusChallenge (Bonus Payload),No Exception,False,False,No Code Placement
+39,MLType,03/13/2023 07:14:29,info: Restored 4-star nullByteChallenge (Poison Null Byte),No Exception,False,False,No Code Placement
+40,MLType,03/13/2023 07:14:29,info: Restored 1-star bullyChatbotChallenge (Bully Chatbot),No Exception,False,False,No Code Placement
+41,MLType,03/13/2023 07:14:29,info: Restored 1-star closeNotificationsChallenge (Mass Dispel),No Exception,False,False,No Code Placement
+42,MLType,03/13/2023 08:08:55,info: All dependencies in ./package.json are satisfied (OK),No Exception,False,False,No Code Placement
+43,MLType,03/13/2023 08:08:58,info: Chatbot training data botDefaultTrainingData.json validated (OK),No Exception,False,False,No Code Placement
+44,MLType,03/13/2023 08:08:58,info: Detected Node.js version v18.14.0 (OK),No Exception,False,False,No Code Placement
+45,MLType,03/13/2023 08:08:58,info: Detected OS linux (OK),No Exception,False,False,No Code Placement
+46,MLType,03/13/2023 08:08:58,info: Detected CPU x64 (OK),No Exception,False,False,No Code Placement
+47,MLType,03/13/2023 08:08:58,info: Configuration default validated (OK),No Exception,False,False,No Code Placement
+48,MLType,03/13/2023 08:08:58,info: Entity models 19 of 19 are initialized (OK),No Exception,False,False,No Code Placement
+49,MLType,03/13/2023 08:08:58,info: Required file server.js is present (OK),No Exception,False,False,No Code Placement
+50,MLType,03/13/2023 08:08:58,info: Required file index.html is present (OK),No Exception,False,False,No Code Placement
+51,MLType,03/13/2023 08:08:58,info: Required file styles.css is present (OK),No Exception,False,False,No Code Placement
+52,MLType,03/13/2023 08:08:58,info: Required file polyfills.js is present (OK),No Exception,False,False,No Code Placement
+53,MLType,03/13/2023 08:08:58,info: Required file main.js is present (OK),No Exception,False,False,No Code Placement
+54,MLType,03/13/2023 08:08:58,info: Required file runtime.js is present (OK),No Exception,False,False,No Code Placement
+105,MLType,02/26/2023 10:53:39,info: Required file vendor.js is present (OK),No Exception,False,False,No Code Placement
+115,MLType,03/13/2023 11:55:24,info: Restored 1-star passwordRepeatChallenge (Repetitive Registration),No Exception,False,False,No Code Placement
+119,MLType,02/26/2023 08:09:25,info: Required file styles.css is present (OK),No Exception,False,False,No Code Placement
+122,MLType,03/13/2023 11:55:24,info: Restored 4-star forgottenBackupChallenge (Forgotten Sales Backup),No Exception,False,False,No Code Placement
+125,MLType,03/13/2023 12:11:06,Access denied to IP address: ::ffff:172.17.0.1,No Exception,False,False,No Code Placement
+126,MLType,03/13/2023 12:12:23,Access denied to IP address: ::ffff:172.17.0.1,No Exception,False,False,No Code Placement
+130,MLType,03/13/2023 13:02:49,info: Solved 2-star geoStalkingVisualChallenge (Visual Geo Stalking),No Exception,False,False,No Code Placement
+133,MLType,02/26/2023 10:53:39,info: Required file tutorial.js is present (OK),No Exception,False,False,No Code Placement
+136,MLType,03/13/2023 14:00:40,info: Detected OS linux (OK),No Exception,False,False,No Code Placement
+140,MLType,03/13/2023 14:00:40,info: Required file styles.css is present (OK),No Exception,False,False,No Code Placement
+143,MLType,03/13/2023 14:00:43,info: Server listening on port 3000,No Exception,False,False,No Code Placement
+144,MLType,03/13/2023 08:09:06,info: Restored 3-star loginJimChallenge (Login Jim),No Exception,False,False,No Code Placement
+149,MLType,03/13/2023 14:00:49,info: Restored 3-star loginBenderChallenge (Login Bender),No Exception,False,False,No Code Placement
+150,MLType,03/13/2023 14:00:49,info: Restored 3-star loginJimChallenge (Login Jim),No Exception,False,False,No Code Placement
+154,MLType,03/13/2023 14:00:49,info: Restored 1-star scoreBoardChallenge (Score Board),No Exception,False,False,No Code Placement
+155,MLType,02/26/2023 08:09:28,info: Server listening on port 3000,No Exception,False,False,No Code Placement
+159,MLType,03/13/2023 14:00:49,info: Restored 1-star bullyChatbotChallenge (Bully Chatbot),No Exception,False,False,No Code Placement
+161,MLType,03/13/2023 14:52:06,info: All dependencies in ./package.json are satisfied (OK),No Exception,False,False,No Code Placement
+162,MLType,03/13/2023 14:52:09,info: Chatbot training data botDefaultTrainingData.json validated (OK),No Exception,False,False,No Code Placement
+164,MLType,03/13/2023 14:52:09,info: Configuration default validated (OK),No Exception,False,False,No Code Placement
+166,MLType,03/13/2023 14:52:10,info: Required file server.js is present (OK),No Exception,False,False,No Code Placement
+170,MLType,03/13/2023 14:52:10,info: Required file runtime.js is present (OK),No Exception,False,False,No Code Placement
+171,MLType,03/13/2023 14:52:13,info: Server listening on port 3000,No Exception,False,False,No Code Placement
+172,MLType,03/13/2023 14:52:17,info: Restored 2-star adminSectionChallenge (Admin Section),No Exception,False,False,No Code Placement
+173,MLType,03/13/2023 14:52:17,info: Restored 4-star easterEggLevelOneChallenge (Easter Egg),No Exception,False,False,No Code Placement
+174,MLType,03/13/2023 14:52:17,info: Restored 1-star errorHandlingChallenge (Error Handling),No Exception,True,False,No Code Placement
+178,MLType,03/13/2023 14:00:49,info: Restored 4-star nullByteChallenge (Poison Null Byte),No Exception,False,False,No Code Placement
+179,MLType,03/13/2023 14:52:17,info: Restored 1-star redirectCryptoCurrencyChallenge (Outdated Allowlist),No Exception,False,False,No Code Placement
+180,MLType,03/13/2023 14:52:17,info: Restored 1-star passwordRepeatChallenge (Repetitive Registration),No Exception,False,False,No Code Placement
+181,MLType,03/13/2023 14:52:17,info: Restored 1-star scoreBoardChallenge (Score Board),No Exception,False,False,No Code Placement
+182,MLType,03/13/2023 14:52:17,info: Restored 2-star securityPolicyChallenge (Security Policy),No Exception,False,False,No Code Placement
+183,MLType,03/13/2023 14:52:17,info: Restored 2-star basketAccessChallenge (View Basket),No Exception,False,False,No Code Placement
+184,MLType,03/13/2023 14:00:40,info: Port 3000 is available (OK),No Exception,False,False,No Code Placement
+185,MLType,03/13/2023 14:52:17,info: Restored 1-star missingEncodingChallenge (Missing Encoding),No Exception,False,False,No Code Placement
+186,MLType,03/13/2023 14:00:49,info: Restored 1-star missingEncodingChallenge (Missing Encoding),No Exception,False,False,No Code Placement
+197,MLType,03/13/2023 15:35:51,info: Restored 1-star localXssChallenge (DOM XSS),No Exception,False,False,No Code Placement
+198,MLType,03/13/2023 15:35:51,info: Restored 1-star errorHandlingChallenge (Error Handling),No Exception,True,False,No Code Placement
+199,MLType,03/13/2023 15:35:47,info: Required file server.js is present (OK),No Exception,False,False,No Code Placement
+200,MLType,03/13/2023 15:35:51,info: Restored 4-star forgottenDevBackupChallenge (Forgotten Developer Backup),No Exception,False,False,No Code Placement
+201,MLType,03/13/2023 15:35:51,info: Restored 2-star loginAdminChallenge (Login Admin),No Exception,False,False,No Code Placement
+202,MLType,03/13/2023 15:35:51,info: Restored 3-star loginBenderChallenge (Login Bender),No Exception,False,False,No Code Placement
+203,MLType,03/13/2023 15:35:51,info: Restored 3-star loginJimChallenge (Login Jim),No Exception,False,False,No Code Placement
+204,MLType,03/13/2023 15:35:51,info: Restored 4-star misplacedSignatureFileChallenge (Misplaced Signature File),No Exception,False,False,No Code Placement
+205,MLType,03/13/2023 15:35:51,info: Restored 1-star redirectCryptoCurrencyChallenge (Outdated Allowlist),No Exception,False,False,No Code Placement
+206,MLType,03/13/2023 15:35:51,info: Restored 2-star weakPasswordChallenge (Password Strength),No Exception,False,False,No Code Placement
+207,MLType,03/13/2023 15:35:51,info: Restored 1-star privacyPolicyChallenge (Privacy Policy),No Exception,False,False,No Code Placement
+208,MLType,03/13/2023 15:35:51,info: Restored 1-star passwordRepeatChallenge (Repetitive Registration),No Exception,False,False,No Code Placement
+209,MLType,03/13/2023 15:35:51,info: Restored 1-star scoreBoardChallenge (Score Board),No Exception,False,False,No Code Placement
+210,MLType,03/13/2023 15:35:51,info: Restored 2-star securityPolicyChallenge (Security Policy),No Exception,False,False,No Code Placement
+211,MLType,03/13/2023 15:35:51,info: Restored 2-star basketAccessChallenge (View Basket),No Exception,False,False,No Code Placement
+212,MLType,03/13/2023 15:35:51,info: Restored 1-star zeroStarsChallenge (Zero Stars),No Exception,False,False,No Code Placement
+213,MLType,03/13/2023 15:35:51,info: Restored 1-star missingEncodingChallenge (Missing Encoding),No Exception,False,False,No Code Placement
+214,MLType,03/13/2023 15:35:51,info: Restored 1-star xssBonusChallenge (Bonus Payload),No Exception,False,False,No Code Placement
+215,MLType,03/13/2023 15:35:51,info: Restored 2-star geoStalkingMetaChallenge (Meta Geo Stalking),No Exception,False,False,No Code Placement
+216,MLType,02/26/2023 08:09:24,info: Entity models 19 of 19 are initialized (OK),No Exception,False,False,No Code Placement
+249,MLType,03/22/2023 10:29:47,info: Restored 3-star loginBenderChallenge (Login Bender),No Exception,False,False,No Code Placement
+250,MLType,03/22/2023 10:29:47,info: Restored 3-star loginJimChallenge (Login Jim),No Exception,False,False,No Code Placement
+253,MLType,03/22/2023 10:29:47,info: Restored 1-star redirectCryptoCurrencyChallenge (Outdated Allowlist),No Exception,False,False,No Code Placement
+254,MLType,03/22/2023 10:29:47,info: Restored 2-star weakPasswordChallenge (Password Strength),No Exception,False,False,No Code Placement
+255,MLType,03/22/2023 10:29:47,info: Restored 1-star privacyPolicyChallenge (Privacy Policy),No Exception,False,False,No Code Placement
+256,MLType,03/22/2023 10:29:47,info: Restored 1-star passwordRepeatChallenge (Repetitive Registration),No Exception,False,False,No Code Placement
+257,MLType,03/22/2023 10:29:47,info: Restored 1-star scoreBoardChallenge (Score Board),No Exception,False,False,No Code Placement
+258,MLType,03/22/2023 10:29:47,info: Restored 2-star securityPolicyChallenge (Security Policy),No Exception,False,False,No Code Placement
+265,MLType,02/26/2023 08:09:25,info: Required file index.html is present (OK),No Exception,False,False,No Code Placement
+266,MLType,04/03/2023 18:02:12,info: Detected Node.js version v18.14.0 (OK),No Exception,False,False,No Code Placement
+267,MLType,04/03/2023 18:02:12,info: Detected OS linux (OK),No Exception,False,False,No Code Placement
+268,MLType,04/03/2023 18:02:12,info: Configuration default validated (OK),No Exception,False,False,No Code Placement
+269,MLType,04/03/2023 18:02:12,info: Entity models 19 of 19 are initialized (OK),No Exception,False,False,No Code Placement
+270,MLType,04/03/2023 18:02:12,info: Required file server.js is present (OK),No Exception,False,False,No Code Placement
+271,MLType,04/03/2023 18:02:12,info: Required file styles.css is present (OK),No Exception,False,False,No Code Placement
+272,MLType,04/03/2023 18:02:12,info: Required file polyfills.js is present (OK),No Exception,False,False,No Code Placement
+283,MLType,04/03/2023 18:02:31,info: Restored 1-star redirectCryptoCurrencyChallenge (Outdated Allowlist),No Exception,False,False,No Code Placement
+292,MLType,04/13/2023 08:13:36,info: Required file tutorial.js is present (OK),No Exception,False,False,No Code Placement
+293,MLType,04/13/2023 08:13:36,info: Required file vendor.js is present (OK),No Exception,False,False,No Code Placement
+294,MLType,04/13/2023 13:44:13,info: All dependencies in ./package.json are satisfied (OK),No Exception,False,False,No Code Placement
+295,MLType,04/13/2023 13:44:15,info: Chatbot training data botDefaultTrainingData.json validated (OK),No Exception,False,False,No Code Placement
+296,MLType,04/13/2023 13:44:16,info: Detected Node.js version v18.14.0 (OK),No Exception,False,False,No Code Placement
+297,MLType,04/13/2023 13:44:16,info: Detected OS linux (OK),No Exception,False,False,No Code Placement
+298,MLType,04/13/2023 13:44:16,info: Detected CPU x64 (OK),No Exception,False,False,No Code Placement
+299,MLType,04/13/2023 13:44:16,info: Configuration default validated (OK),No Exception,False,False,No Code Placement
+300,MLType,04/13/2023 13:44:16,info: Entity models 19 of 19 are initialized (OK),No Exception,False,False,No Code Placement
+301,MLType,03/13/2023 14:52:10,info: Required file styles.css is present (OK),No Exception,False,False,No Code Placement
+302,MLType,04/13/2023 13:44:16,info: Required file main.js is present (OK),No Exception,False,False,No Code Placement
+303,MLType,04/13/2023 13:44:16,info: Required file styles.css is present (OK),No Exception,False,False,No Code Placement
+304,MLType,04/13/2023 13:44:16,info: Required file polyfills.js is present (OK),No Exception,False,False,No Code Placement
+305,MLType,04/13/2023 13:44:16,info: Required file vendor.js is present (OK),No Exception,False,False,No Code Placement
+306,MLType,04/13/2023 13:44:16,info: Required file runtime.js is present (OK),No Exception,False,False,No Code Placement
+307,MLType,04/13/2023 13:44:16,info: Required file tutorial.js is present (OK),No Exception,False,False,No Code Placement
+308,MLType,04/13/2023 13:44:16,info: Required file index.html is present (OK),No Exception,False,False,No Code Placement
+309,MLType,04/13/2023 13:44:16,info: Port 3000 is available (OK),No Exception,False,False,No Code Placement
+310,MLType,04/13/2023 13:44:18,info: Server listening on port 3000,No Exception,False,False,No Code Placement
+311,MLType,04/20/2023 08:30:29,info: All dependencies in ./package.json are satisfied (OK),No Exception,False,False,No Code Placement
+312,MLType,04/20/2023 08:30:34,info: Chatbot training data botDefaultTrainingData.json validated (OK),No Exception,False,False,No Code Placement
+313,MLType,04/20/2023 08:30:34,info: Detected Node.js version v18.14.0 (OK),No Exception,False,False,No Code Placement
+314,MLType,04/20/2023 08:30:34,info: Detected OS linux (OK),No Exception,False,False,No Code Placement
+315,MLType,04/20/2023 08:30:34,info: Detected CPU x64 (OK),No Exception,False,False,No Code Placement
+316,MLType,04/20/2023 08:30:34,info: Configuration default validated (OK),No Exception,False,False,No Code Placement
+317,MLType,04/20/2023 08:30:34,info: Entity models 19 of 19 are initialized (OK),No Exception,False,False,No Code Placement
+318,MLType,04/20/2023 08:30:34,info: Required file server.js is present (OK),No Exception,False,False,No Code Placement
+319,MLType,03/13/2023 15:35:51,info: Restored 2-star geoStalkingVisualChallenge (Visual Geo Stalking),No Exception,False,False,No Code Placement
+320,MLType,04/20/2023 08:30:34,info: Required file index.html is present (OK),No Exception,False,False,No Code Placement
+321,MLType,04/20/2023 08:30:34,info: Required file styles.css is present (OK),No Exception,False,False,No Code Placement
+322,MLType,04/20/2023 08:30:34,info: Required file main.js is present (OK),No Exception,False,False,No Code Placement
+323,MLType,04/20/2023 08:30:34,info: Required file tutorial.js is present (OK),No Exception,False,False,No Code Placement
+324,MLType,04/20/2023 08:30:34,info: Required file polyfills.js is present (OK),No Exception,False,False,No Code Placement
+325,MLType,04/20/2023 08:30:34,info: Required file runtime.js is present (OK),No Exception,False,False,No Code Placement
+326,MLType,04/20/2023 08:30:34,info: Required file vendor.js is present (OK),No Exception,False,False,No Code Placement
+327,MLType,04/20/2023 08:30:34,info: Port 3000 is available (OK),No Exception,False,False,No Code Placement
+330,MLType,05/05/2023 15:23:01,info: Chatbot training data botDefaultTrainingData.json validated (OK),No Exception,False,False,No Code Placement
+331,MLType,05/05/2023 15:23:02,info: Detected Node.js version v18.14.0 (OK),No Exception,False,False,No Code Placement
+358,MLType,05/07/2023 15:10:51,info: Detected CPU x64 (OK),No Exception,False,False,No Code Placement
+359,MLType,05/07/2023 15:10:51,info: Configuration default validated (OK),No Exception,False,False,No Code Placement
+360,MLType,05/07/2023 15:10:51,info: Entity models 19 of 19 are initialized (OK),No Exception,False,False,No Code Placement
+361,MLType,05/07/2023 15:10:51,info: Required file server.js is present (OK),No Exception,False,False,No Code Placement
+362,MLType,05/07/2023 15:10:51,info: Required file main.js is present (OK),No Exception,False,False,No Code Placement
+363,MLType,05/07/2023 15:10:51,info: Required file polyfills.js is present (OK),No Exception,False,False,No Code Placement
+364,MLType,04/13/2023 13:44:16,info: Required file server.js is present (OK),No Exception,False,False,No Code Placement
+374,MLType,05/10/2023 06:50:26,info: Required file polyfills.js is present (OK),No Exception,False,False,No Code Placement
+375,MLType,05/10/2023 06:50:28,info: Server listening on port 3000,No Exception,False,False,No Code Placement
+388,MLType,05/10/2023 15:36:07,info: Restored 1-star localXssChallenge (DOM XSS),No Exception,False,False,No Code Placement
+390,MLType,05/10/2023 15:36:07,info: Restored 4-star forgottenDevBackupChallenge (Forgotten Developer Backup),No Exception,False,False,No Code Placement
+391,MLType,05/10/2023 15:36:07,info: Restored 4-star forgottenBackupChallenge (Forgotten Sales Backup),No Exception,False,False,No Code Placement
+393,MLType,05/10/2023 15:36:07,info: Restored 2-star loginRapperChallenge (Login MC SafeSearch),No Exception,False,False,No Code Placement
+394,MLType,05/10/2023 15:36:07,info: Restored 4-star misplacedSignatureFileChallenge (Misplaced Signature File),No Exception,False,False,No Code Placement
+395,MLType,05/10/2023 15:36:07,info: Restored 1-star redirectCryptoCurrencyChallenge (Outdated Allowlist),No Exception,False,False,No Code Placement
+396,MLType,05/10/2023 15:36:07,info: Restored 2-star weakPasswordChallenge (Password Strength),No Exception,False,False,No Code Placement
+397,MLType,05/10/2023 15:36:07,info: Restored 1-star privacyPolicyChallenge (Privacy Policy),No Exception,False,False,No Code Placement
+408,MLType,05/12/2023 06:39:02,info: Chatbot training data botDefaultTrainingData.json validated (OK),No Exception,False,False,No Code Placement
+409,MLType,05/12/2023 06:39:03,info: Detected Node.js version v18.14.0 (OK),No Exception,False,False,No Code Placement
+412,MLType,05/12/2023 06:39:03,info: Required file polyfills.js is present (OK),No Exception,False,False,No Code Placement
+413,MLType,05/12/2023 06:39:03,info: Required file runtime.js is present (OK),No Exception,False,False,No Code Placement

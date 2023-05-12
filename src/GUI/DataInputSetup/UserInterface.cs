@@ -12,6 +12,21 @@ public class UserInterface
 
     Data Stream Setup // Version 1.0");
     }
+    public void WelcomeScreenAltern()
+    {
+        
+        System.Console.WriteLine(
+    @"
+    __               _       ___           __  _____ 
+   / /   ____  ____ | |     / (_)_______  /  |/  / / 
+  / /   / __ \/ __ `/ | /| / / / ___/ _ \/ /|_/ / /  
+ / /___/ /_/ / /_/ /| |/ |/ / (__  )  __/ /  / / /___
+/_____/\____/\__, / |__/|__/_/____/\___/_/  /_/_____/
+            /____/                                   
+    Data Stream Setup // Version 1.0");
+    }
+
+
     public string Menu()
     {
         System.Console.WriteLine(
@@ -23,9 +38,9 @@ public class UserInterface
         3) See Running Connections
         4) Stop Running Connections
         
-        *****************************");                                     
-        System.Console.Write(@"
-        Enter your choice: ");
+        *****************************
+        ");                                     
+        System.Console.Write("Enter choice:");
         var choice = System.Console.ReadLine();
         return choice;
     }

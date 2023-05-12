@@ -2,6 +2,7 @@ using DataProcessing.Application.Dtos;
 using DataProcessing.Application.Queries.Interfaces;
 using DataProcessing.Application.Commands.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using DataProcessing.API.Infrastructure.Producer.Interfaces;
 
 namespace DataProcessing.API.Controllers;
 
@@ -11,16 +12,44 @@ public class DataProcessingController
 {
     private readonly IGetAllQuery<LogQueryResultDto> _getAllQuery;
     private readonly IConvertToCSV<LogQueryResultDto> _convertToCSV;
-    public DataProcessingController(IGetAllQuery<LogQueryResultDto> getAllQuery, IConvertToCSV<LogQueryResultDto> convertToCSV)
+    private readonly IProducer _producerAnalysis;
+    private readonly IProducer _producerMLDataset;
+    public DataProcessingController(IGetAllQuery<LogQueryResultDto> getAllQuery, 
+                                    IConvertToCSV<LogQueryResultDto> convertToCSV,
+                                    IProducer producerAnalysis,
+                                    IProducer producerMLDataset)
     {
         _getAllQuery = getAllQuery;
         _convertToCSV = convertToCSV;
+        _producerAnalysis = producerAnalysis;
+        _producerMLDataset = producerMLDataset;
     }
 
     [HttpGet]
-    public string GetAll()
+    [Route("csv")]
+    public async Task<string> GetAllAsCSV()
     {
-        var dtos = _getAllQuery.GetAll();
-        return _convertToCSV.ConvertAsync(dtos).Result;
+        var dtos = await _getAllQuery.GetAllAsync();
+        return await _convertToCSV.ConvertAsync(dtos);
+    }
+
+    [HttpGet]
+    public async Task<IEnumerable<LogQueryResultDto>> GetAll()
+    {
+        return await _getAllQuery.GetAllAsync();
+    }
+
+    [HttpGet]
+    [Route("mldataset")]
+    public async Task SendToMLTrainer()
+    {
+        await _producerMLDataset.ProduceAsync();
+    }
+
+    [HttpGet]
+    [Route("analysis")]
+    public async Task SendToAnalysis()
+    {
+        await _producerAnalysis.ProduceAsync();
     }
 }

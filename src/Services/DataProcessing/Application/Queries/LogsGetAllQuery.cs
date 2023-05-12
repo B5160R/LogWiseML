@@ -10,8 +10,8 @@ public class LogsGetAllQuery : IGetAllQuery<LogQueryResultDto>
     {
         _repository = repository;
     }
-    public IEnumerable<LogQueryResultDto> GetAll()
+    public async Task<IEnumerable<LogQueryResultDto>> GetAllAsync()
     {
-        return _repository.GetAll();
+        return await _repository.GetAllAsync();
     }
 }

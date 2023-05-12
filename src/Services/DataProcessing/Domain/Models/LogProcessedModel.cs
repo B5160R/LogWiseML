@@ -2,8 +2,7 @@ namespace DataProcessing.Domain.Models;
 public class LogProcessedModel
 {
     public int Id { get; private set; }
-    // The type of dataset the log is processed into to be used for ML
-    public string MLType { get; private set; }
+    public string MLType { get; private set; } // The type of dataset the log is processed into to be used for ML
     public DateTime Timestamp { get; private set; }
     public string LogMessage { get; private set; }
     public string ExceptionType { get; private set; }

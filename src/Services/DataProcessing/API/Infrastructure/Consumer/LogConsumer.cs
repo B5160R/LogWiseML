@@ -1,3 +1,4 @@
+using DataProcessing.API.Infrastructure.Producer.Interfaces;
 using DataProcessing.Application.Commands.Interfaces;
 using DataProcessing.Application.Dtos;
 using MassTransit;
@@ -7,7 +8,8 @@ public class LogConsumer : IConsumer<LogRaw>
 {
     private readonly ILogger<LogConsumer> _logger;
     private readonly ICreateCommand<LogProcessRequestDto> _createCommand;
-    public LogConsumer(ILogger<LogConsumer> logger, ICreateCommand<LogProcessRequestDto> createCommand)
+    public LogConsumer(ILogger<LogConsumer> logger, 
+                       ICreateCommand<LogProcessRequestDto> createCommand)
     {
         _logger = logger;
         _createCommand = createCommand;
@@ -22,7 +24,7 @@ public class LogConsumer : IConsumer<LogRaw>
         try
         {
             var dto = new LogProcessRequestDto(context.Message.Id, context.Message.Content);
-            await _createCommand.Create(dto);
+            await _createCommand.CreateAsync(dto);
         }
         catch (System.Exception)
         {

@@ -12,7 +12,7 @@ public class LogProcessedCreateCommand<T> : ICreateCommand<LogProcessRequestDto>
         _repository = repository;
     }
 
-    public async Task Create(LogProcessRequestDto dto)
+    public async Task CreateAsync(LogProcessRequestDto dto)
     {
         var entityProcessed = new LogProcessedModel(dto.Id, "MLType", dto.Content);
         

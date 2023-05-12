@@ -1,20 +1,17 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.EntityFrameworkCore.Sqlite;
-using DataCollection.Database.Context;
-using DataCollection.Domain.Models;
+using DataCollection.API.Infrastructure.Producer;
+using DataCollection.API.Infrastructure.Consumer;
+using DataCollection.Application.Commands.Interfaces;
+using DataCollection.Application.Commands;
+using DataCollection.Application.Dtos;
 using DataCollection.Application.Queries.Interfaces;
 using DataCollection.Application.Queries;
 using DataCollection.Application.Repositories;
 using DataCollection.Infrastructure.Repositories;
-using DataCollection.Application.Commands.Interfaces;
-using DataCollection.Application.Commands;
-using DataCollection.Application.Dtos;
+using DataCollection.Database.Context;
 using Microsoft.EntityFrameworkCore;
-using RabbitMQ.Client;
 using MassTransit;
 using Shared.Settings;
+using DataCollection.API.Infrastructure.Producer.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -48,6 +45,7 @@ builder.Services.AddMassTransit(x =>
 builder.Services.AddScoped<ILogRepository, LogRepository>();
 builder.Services.AddScoped<IGetAllQuery<IEnumerable<LogQueryResultDto>>, LogGetAllQuery>();
 builder.Services.AddScoped<ICreateCommand<LogCreateRequestDto>, LogCreateCommand<LogCreateRequestDto>>();
+builder.Services.AddScoped<IProducer, LogProducer>();
 
 var app = builder.Build();
 

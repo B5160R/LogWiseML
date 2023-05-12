@@ -10,8 +10,8 @@ public class SendLogsToApi
 
     public async Task SendLogs(string logs)
     {
+        System.Console.WriteLine("");
         // Split logs by new line
-
         // Send each log to the API
         foreach(var log in logs.Split("\n"))
         {
@@ -21,7 +21,7 @@ public class SendLogsToApi
                                                                         "application/json"));
             if (response.IsSuccessStatusCode)
             {
-                System.Console.WriteLine(response.StatusCode);
+                System.Console.Write(". ");
             }
             else
             {
@@ -34,5 +34,10 @@ public class SendLogsToApi
                 System.Console.WriteLine(response.Version);
             }
         }
+        System.Console.WriteLine("");
+        System.Console.WriteLine("");
+        System.Console.WriteLine(" *** Logs sent successfully! ***");
+        System.Console.WriteLine("");
+        System.Console.ReadKey();
     }
 }

@@ -41,24 +41,4 @@ public class DataCollectionController : ControllerBase
             throw;
         }
     }
-
-    // curl -X POST -H "Content-type: application/json" --data "{\"content\": \"cmdTest666\"}" http://localhost:5026/datacollection
-    // [HttpPost]
-    // public async Task<IActionResult> Post([FromBody] string Content)
-    // {
-    //     try
-    //     {
-    //         _createCommand.Create(new LogCreateRequestDto { Content = Content });
-            
-    //         // var test = new LogRaw { Content = Content };
-    //         // await _publishEndpoint.Publish<LogRaw>(test);
-
-    //         return Ok();
-    //     }
-    //     catch (Exception ex)
-    //     {
-    //         _logger.LogError(ex, "Error creating log");
-    //         throw;
-    //     }
-    // }
 }

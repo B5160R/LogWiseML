@@ -9,6 +9,8 @@ using Microsoft.EntityFrameworkCore;
 using Shared.Settings;
 using DataProcessing.Application.Queries.Interfaces;
 using DataProcessing.Application.Queries;
+using DataProcessing.API.Infrastructure.Producer.Interfaces;
+using DataProcessing.API.Infrastructure.Producer;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -43,6 +45,9 @@ builder.Services.AddScoped<ILogProcessedRepository, LogProcessedRepository>();
 builder.Services.AddScoped<ICreateCommand<LogProcessRequestDto>, LogProcessedCreateCommand<LogProcessRequestDto>>();
 builder.Services.AddScoped<IGetAllQuery<LogQueryResultDto>, LogsGetAllQuery>();
 builder.Services.AddScoped<IConvertToCSV<LogQueryResultDto>, LogsConvertToCSV>();
+builder.Services.AddScoped<IProducer, LogProducerAnalysis>();
+builder.Services.AddScoped<IProducer, LogProducerMLDataset>();
+
 
 var app = builder.Build();
 

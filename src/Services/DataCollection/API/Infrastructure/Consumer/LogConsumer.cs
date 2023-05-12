@@ -1,19 +1,22 @@
+using DataCollection.API.Infrastructure.Producer;
+using DataCollection.API.Infrastructure.Producer.Interfaces;
 using DataCollection.Application.Commands.Interfaces;
 using DataCollection.Application.Dtos;
 using MassTransit;
 using Shared.Models.Logs;
 
+namespace DataCollection.API.Infrastructure.Consumer;
 public class LogConsumer : IConsumer<LogInput>
 {
     private readonly ILogger<LogConsumer> _logger;
-    private readonly IPublishEndpoint _publishEndpoint;
     private readonly ICreateCommand<LogCreateRequestDto> _createCommand;
+    private readonly IProducer _producer;
     
-    public LogConsumer(ILogger<LogConsumer> logger, IPublishEndpoint publishEndpoint, ICreateCommand<LogCreateRequestDto> createCommand)
+    public LogConsumer(ILogger<LogConsumer> logger, ICreateCommand<LogCreateRequestDto> createCommand, IProducer producer)
     {
         _logger = logger;
-        _publishEndpoint = publishEndpoint;
         _createCommand = createCommand;
+        _producer = producer;
     }
 
     public async Task Consume(ConsumeContext<LogInput> context)
@@ -23,12 +26,7 @@ public class LogConsumer : IConsumer<LogInput>
         try
         {
             var savedLogDto = await _createCommand.CreateAsync(new LogCreateRequestDto(context.Message.Content));
-            
-            var logProcessedDto = new LogRaw(savedLogDto.Id, savedLogDto.Content);
-
-            await Console.Out.WriteLineAsync($"Info: Sending log to DataProcessing API");
-
-            await _publishEndpoint.Publish<LogRaw>(logProcessedDto);
+            await _producer.ProduceAsync(savedLogDto);
         }
         catch (System.Exception)
         {
