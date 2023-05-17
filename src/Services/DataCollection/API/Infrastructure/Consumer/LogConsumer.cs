@@ -1,4 +1,3 @@
-using DataCollection.API.Infrastructure.Producer;
 using DataCollection.API.Infrastructure.Producer.Interfaces;
 using DataCollection.Application.Commands.Interfaces;
 using DataCollection.Application.Dtos;
@@ -28,9 +27,9 @@ public class LogConsumer : IConsumer<LogInput>
             var savedLogDto = await _createCommand.CreateAsync(new LogCreateRequestDto(context.Message.Content));
             await _producer.ProduceAsync(savedLogDto);
         }
-        catch (System.Exception)
+        catch (Exception ex)
         {
-            _logger.LogError("Error while processing log");
+            _logger.LogError(ex, "Error while processing log");
         }
     }
 }

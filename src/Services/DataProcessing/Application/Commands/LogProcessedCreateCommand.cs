@@ -4,7 +4,7 @@ using DataProcessing.Application.Dtos;
 using DataProcessing.Application.Repositories;
 
 namespace DataProcessing.Application.Commands;
-public class LogProcessedCreateCommand<T> : ICreateCommand<LogProcessRequestDto>
+public class LogProcessedCreateCommand : ICreateCommand<LogProcessRequestDto>
 {
     private readonly ILogProcessedRepository _repository;
     public LogProcessedCreateCommand(ILogProcessedRepository repository)
@@ -15,7 +15,7 @@ public class LogProcessedCreateCommand<T> : ICreateCommand<LogProcessRequestDto>
     public async Task CreateAsync(LogProcessRequestDto dto)
     {
         var entityProcessed = new LogProcessedModel(dto.Id, "MLType", dto.Content);
-        
+
         await _repository.CreateAsync(entityProcessed);
     }
 }

@@ -10,6 +10,7 @@ RUN pip install flask_restful
 RUN pip install pandas
 RUN pip install numpy
 RUN pip install matplotlib
+
 # RUN pip install pickle
 RUN pip install sklearn
 

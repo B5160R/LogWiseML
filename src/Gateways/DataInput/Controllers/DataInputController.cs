@@ -11,7 +11,7 @@ namespace DataInput.Controllers
         private readonly ILogger<DataInputController> _logger;
         private readonly IPublishEndpoint _publishEndpoint;
 
-        public DataInputController(ILogger<DataInputController> logger, IPublishEndpoint publishEndpoint )
+        public DataInputController(ILogger<DataInputController> logger, IPublishEndpoint publishEndpoint)
         {
             _logger = logger;
             _publishEndpoint = publishEndpoint;
@@ -20,9 +20,16 @@ namespace DataInput.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] LogInput dto)
         {
-            await _publishEndpoint.Publish<LogInput>(dto);
-
-            return Ok();
+            try
+            {
+                await _publishEndpoint.Publish<LogInput>(dto);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error sending log");
+                return BadRequest();
+            }
         }
     }
 }

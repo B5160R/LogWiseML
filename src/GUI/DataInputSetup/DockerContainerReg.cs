@@ -28,9 +28,9 @@ public class DockerContainerReg
             -t, --timestamps     Show timestamps
                 --until string   Show logs before a timestamp (e.g.
                                 2013-01-02T13:23:37Z) or relative (e.g. 42m for 42
-                                minutes)
+                                minutes) 
         */
-        _getDockerLogs.StartInfo.Arguments = $"logs -t {dockerContainerId}";
+        _getDockerLogs.StartInfo.Arguments = $"logs {dockerContainerId} -t -n 5";
         _getDockerLogs.Start();
         string output = await _getDockerLogs.StandardOutput.ReadToEndAsync();
         return output;

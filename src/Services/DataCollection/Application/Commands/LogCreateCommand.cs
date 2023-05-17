@@ -6,7 +6,7 @@ using DataCollection.Application.Repositories;
 
 namespace DataCollection.Application.Commands;
 
-public class LogCreateCommand<T> : ICreateCommand<LogCreateRequestDto> where T : class
+public class LogCreateCommand : ICreateCommand<LogCreateRequestDto>
 {
     private readonly ILogRepository _repository;
 

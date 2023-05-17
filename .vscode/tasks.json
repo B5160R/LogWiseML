@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/DataCollection/API/API.csproj",
+                "${workspaceFolder}/src/Services/DataCollection/API/API.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/DataCollection/API/API.csproj",
+                "${workspaceFolder}/src/Services/DataCollection/API/API.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/DataCollection/API/API.csproj"
+                "${workspaceFolder}/src/Services/DataCollection/API/API.csproj"
             ],
             "problemMatcher": "$msCompile"
         },

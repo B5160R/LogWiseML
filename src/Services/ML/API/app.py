@@ -10,6 +10,10 @@ def dataset_collector():
         # Save the CSV data to a file
         with open('../Data/Datasets/dataset.csv', 'w') as f:
             f.write(csv_data)
+        print(csv_data)
         return 'Dataset saved successfully'
     
     return 'Dataset not saved'
+
+# @app.route('/api/run-model', methods=['POST'])
+# def run_model():

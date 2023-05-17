@@ -40,7 +40,7 @@ public class UserInterface
         
         *****************************
         ");                                     
-        System.Console.Write("Enter choice:");
+        System.Console.Write("Enter choice: ");
         var choice = System.Console.ReadLine();
         return choice;
     }

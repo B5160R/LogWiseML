@@ -12,6 +12,8 @@ using Microsoft.EntityFrameworkCore;
 using MassTransit;
 using Shared.Settings;
 using DataCollection.API.Infrastructure.Producer.Interfaces;
+using Shared.Models.Logs;
+using MassTransit.Transports.Fabric;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,7 +46,7 @@ builder.Services.AddMassTransit(x =>
 
 builder.Services.AddScoped<ILogRepository, LogRepository>();
 builder.Services.AddScoped<IGetAllQuery<IEnumerable<LogQueryResultDto>>, LogGetAllQuery>();
-builder.Services.AddScoped<ICreateCommand<LogCreateRequestDto>, LogCreateCommand<LogCreateRequestDto>>();
+builder.Services.AddScoped<ICreateCommand<LogCreateRequestDto>, LogCreateCommand>();
 builder.Services.AddScoped<IProducer, LogProducer>();
 
 var app = builder.Build();

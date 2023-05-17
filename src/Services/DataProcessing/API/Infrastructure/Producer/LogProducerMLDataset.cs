@@ -8,19 +8,19 @@ namespace DataProcessing.API.Infrastructure.Producer;
 public class LogProducerMLDataset : IProducer
 {
     private readonly ILogger<LogProducerMLDataset> _logger;
-    private readonly IPublishEndpoint _publishEndpoint;
+    private readonly HttpClient _httpClient;
     private readonly IConvertToCSV<LogQueryResultDto> _convertToCSV;
     private readonly IGetAllQuery<LogQueryResultDto> _getAllQuery;
 
-    public LogProducerMLDataset(ILogger<LogProducerMLDataset> logger, 
-                                IPublishEndpoint publishEndpoint, 
+    public LogProducerMLDataset(ILogger<LogProducerMLDataset> logger,
                                 IConvertToCSV<LogQueryResultDto> convertToCSV, 
-                                IGetAllQuery<LogQueryResultDto> getAllQuery)
+                                IGetAllQuery<LogQueryResultDto> getAllQuery,
+                                HttpClient httpClient)
     {
         _logger = logger;
-        _publishEndpoint = publishEndpoint;
         _convertToCSV = convertToCSV;
         _getAllQuery = getAllQuery;
+        _httpClient = httpClient;
     }
 
     public async Task ProduceAsync()
@@ -31,7 +31,8 @@ public class LogProducerMLDataset : IProducer
             var dtos = await _getAllQuery.GetAllAsync();
             var dataset = await _convertToCSV.ConvertAsync(dtos);
 
-            // Send to MLTrainer API
+            // Send to ML API
+            var response = await _httpClient.PostAsJsonAsync("/api/MLTrainer", dataset);
         }
         catch (System.Exception)
         {
