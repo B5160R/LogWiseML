@@ -41,16 +41,18 @@ builder.Services.AddMassTransit(x =>
     });
 });
 
-builder.Services.AddHttpClient<IProducer, LogProducerMLDataset>(client =>
-{
-    client.BaseAddress = new Uri(builder.Configuration["MLDatasetAPI"]);
-});
-
 builder.Services.AddScoped<ILogProcessedRepository, LogProcessedRepository>();
 builder.Services.AddScoped<ICreateCommand<LogProcessRequestDto>, LogProcessedCreateCommand>();
 builder.Services.AddScoped<IGetAllQuery<LogQueryResultDto>, LogsGetAllQuery>();
 builder.Services.AddScoped<IConvertToCSV<LogQueryResultDto>, LogsConvertToCSV>();
-builder.Services.AddScoped<IProducer, LogProducerAnalysis>();
+builder.Services.AddScoped<IProducerAnalysis, LogProducerAnalysis>();
+builder.Services.AddScoped<IProducerMLDataset, LogProducerMLDataset>();
+
+builder.Services.AddHttpClient<IProducerMLDataset, LogProducerMLDataset>(client =>
+{
+    client.BaseAddress = new Uri(builder.Configuration["MLDatasetAPI"]);
+});
+
 
 
 var app = builder.Build();

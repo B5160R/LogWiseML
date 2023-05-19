@@ -14,9 +14,8 @@ public class LogProcessedModel
     // public string ErrorStatus { get; private set; }
     // public string ErrorType { get; private set; }
     
-    public LogProcessedModel(int id, string mlType, string content)
+    public LogProcessedModel(string mlType, string content)
     {
-        Id = id;
         MLType = mlType;
 
         Timestamp = GetTimestamp(content);

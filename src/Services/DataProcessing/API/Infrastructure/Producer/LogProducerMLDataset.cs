@@ -5,7 +5,7 @@ using DataProcessing.Application.Dtos;
 using MassTransit;
 
 namespace DataProcessing.API.Infrastructure.Producer;
-public class LogProducerMLDataset : IProducer
+public class LogProducerMLDataset : IProducerMLDataset
 {
     private readonly ILogger<LogProducerMLDataset> _logger;
     private readonly HttpClient _httpClient;
@@ -32,11 +32,12 @@ public class LogProducerMLDataset : IProducer
             var dataset = await _convertToCSV.ConvertAsync(dtos);
 
             // Send to ML API
-            var response = await _httpClient.PostAsJsonAsync("/api/MLTrainer", dataset);
+            var response = await _httpClient.PostAsJsonAsync("/api/dataset", dataset);
         }
         catch (System.Exception)
         {
             _logger.LogError("Error while processing log");
+            throw;;
         }
     }
 }

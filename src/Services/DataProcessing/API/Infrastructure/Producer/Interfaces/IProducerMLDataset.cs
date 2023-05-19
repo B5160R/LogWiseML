@@ -1,6 +1,6 @@
 namespace DataProcessing.API.Infrastructure.Producer.Interfaces
 {
-    public interface IProducer
+    public interface IProducerMLDataset
     {
         Task ProduceAsync();
     }

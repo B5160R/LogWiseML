@@ -3,9 +3,10 @@ using DataProcessing.Application.Commands.Interfaces;
 using DataProcessing.Application.Dtos;
 using DataProcessing.Application.Queries.Interfaces;
 using MassTransit;
+using Shared.Models.Logs;
 
 namespace DataProcessing.API.Infrastructure.Producer;
-public class LogProducerAnalysis : IProducer
+public class LogProducerAnalysis : IProducerAnalysis
 {
     private readonly ILogger<LogProducerAnalysis> _logger;
     private readonly IPublishEndpoint _publishEndpoint;
@@ -24,11 +25,20 @@ public class LogProducerAnalysis : IProducer
     }
     public async Task ProduceAsync()
     {
-        var dtos = await _getAllQuery.GetAllAsync();
-        var csvdata = _convertToCSV.ConvertAsync(dtos);
+        try
+        {
+            var dtos = await _getAllQuery.GetAllAsync();
+            var csvdata = _convertToCSV.ConvertAsync(dtos);
 
-        // Send to Analysis API
+            // Send to Analysis API
+            await _publishEndpoint.Publish<LogCsv>(new
+            {
+                Content = csvdata
+            });
+        }
+        catch (System.Exception ex)
+        {
+            _logger.LogError(ex, "Error while sending data to Analysis API");
+        }
     }
 }
-
-

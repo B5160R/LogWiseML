@@ -12,12 +12,12 @@ public class DataProcessingController
 {
     private readonly IGetAllQuery<LogQueryResultDto> _getAllQuery;
     private readonly IConvertToCSV<LogQueryResultDto> _convertToCSV;
-    private readonly IProducer _producerAnalysis;
-    private readonly IProducer _producerMLDataset;
+    private readonly IProducerAnalysis _producerAnalysis;
+    private readonly IProducerMLDataset _producerMLDataset;
     public DataProcessingController(IGetAllQuery<LogQueryResultDto> getAllQuery, 
                                     IConvertToCSV<LogQueryResultDto> convertToCSV,
-                                    IProducer producerAnalysis,
-                                    IProducer producerMLDataset)
+                                    IProducerAnalysis producerAnalysis,
+                                    IProducerMLDataset producerMLDataset)
     {
         _getAllQuery = getAllQuery;
         _convertToCSV = convertToCSV;

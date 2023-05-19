@@ -30,7 +30,7 @@ public class DockerContainerReg
                                 2013-01-02T13:23:37Z) or relative (e.g. 42m for 42
                                 minutes) 
         */
-        _getDockerLogs.StartInfo.Arguments = $"logs {dockerContainerId} -t -n 5";
+        _getDockerLogs.StartInfo.Arguments = $"logs {dockerContainerId} -t";
         _getDockerLogs.Start();
         string output = await _getDockerLogs.StandardOutput.ReadToEndAsync();
         return output;

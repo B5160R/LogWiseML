@@ -1,7 +1,7 @@
 namespace DataProcessing.API.Infrastructure.Producer.Interfaces
 {
-    public interface IProducerAnalysis<T>
+    public interface IProducerAnalysis
     {
-        Task ProduceAsync(IEnumerable<T> dtos);
+        Task ProduceAsync();
     }
 }

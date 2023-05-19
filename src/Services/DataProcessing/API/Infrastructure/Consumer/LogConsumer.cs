@@ -4,7 +4,7 @@ using DataProcessing.Application.Dtos;
 using MassTransit;
 using Shared.Models.Logs;
 
-public class LogConsumer : IConsumer<LogRaw>
+public class LogConsumer : IConsumer<LogInput>
 {
     private readonly ILogger<LogConsumer> _logger;
     private readonly ICreateCommand<LogProcessRequestDto> _createCommand;
@@ -15,15 +15,14 @@ public class LogConsumer : IConsumer<LogRaw>
         _createCommand = createCommand;
     }
     
-    public async Task Consume(ConsumeContext<LogRaw> context)
+    public async Task Consume(ConsumeContext<LogInput> context)
     {
         await Console.Out.WriteLineAsync($"Info: Received log from DataCollector API");
-        await Console.Out.WriteLineAsync($"      --- Log ID: {context.Message.Id}"); 
         await Console.Out.WriteLineAsync($"      --- Log content: {context.Message.Content}");
 
         try
         {
-            var dto = new LogProcessRequestDto(context.Message.Id, context.Message.Content);
+            var dto = new LogProcessRequestDto(context.Message.Content);
             await _createCommand.CreateAsync(dto);
         }
         catch (System.Exception)
