@@ -3,9 +3,9 @@ using DataInputSetup.Commands;
 using DataInputSetup.Infrastructure;
 
 var ui = new UserInterface();
-var dockerContainerReg = new DockerContainerReg();
 var apiConn = new SendLogsToApi();
 var connections = new List<string>();
+IList<DockerContainerReg> dockerContainerRegs = new List<DockerContainerReg>();
 
 System.Console.Clear();
 
@@ -22,12 +22,13 @@ while(run)
         case "2":
             var dockerContainerId = ui.DockerContainerSetup();
             connections.Add(dockerContainerId);
-            System.Console.WriteLine("*** Retrieving logs from Docker Container... ***");
-            var logs = await dockerContainerReg.GetLogsAsync(dockerContainerId);
-            System.Console.WriteLine("*** Logs retrieved successfully! ***");
-            
-            System.Console.WriteLine("*** Connecting to LogWiseML API... ***");
-            await apiConn.SendLogs(logs);
+            System.Console.WriteLine("*** Registering Docker Container... ***");
+            dockerContainerRegs.Add(new DockerContainerReg(dockerContainerId));
+            dockerContainerRegs.Last().GetLogsAsync();
+            System.Console.WriteLine("*** Docker Container registered successfully! ***");
+            System.Console.WriteLine("");
+            System.Console.WriteLine("*** Press any key to continue... ***");
+            System.Console.ReadKey();
             break;
         case "3":
             System.Console.WriteLine("Running connections:");
