@@ -1,5 +1,8 @@
+using System.Text;
 using MassTransit;
 using MassTransit.Transports.Fabric;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using Shared.Models.Logs;
 using Shared.Settings;
 
@@ -25,6 +28,16 @@ builder.Services.AddMassTransit(x =>
     });
 });
 
+builder.Services.AddAuthentication(options =>
+        {
+            options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        }).AddJwtBearer(options =>
+        {
+            options.Authority = "https://dev-ujq0auq8ybqjike1.us.auth0.com/";
+            options.Audience = "http://+:5051";
+        });
+        
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -36,6 +49,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

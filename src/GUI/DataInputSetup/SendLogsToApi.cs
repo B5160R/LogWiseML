@@ -1,4 +1,6 @@
 using System.Diagnostics;
+using System.Net.Http.Headers;
+using DataInputSetup.AccessToken;
 
 namespace DataInputSetup.Infrastructure;
 public class SendLogsToApi
@@ -8,6 +10,8 @@ public class SendLogsToApi
     public SendLogsToApi()
     {
         _client = new System.Net.Http.HttpClient();
+        _client.BaseAddress = new Uri("http://localhost:5051");
+        _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token.AccessToken);
     }
 
     public async Task SendLogs(string logs)
@@ -18,10 +22,10 @@ public class SendLogsToApi
         // Send each log to the API
         foreach(var log in logs.Split("\n"))
         {
-            var response = await _client.PostAsync("http://localhost:5051/api/DataInput",
-                                                    new StringContent($"{{\"content\": \"{log}\"}}",
-                                                                        System.Text.Encoding.UTF8,
-                                                                        "application/json"));
+            var content = new StringContent($"{{\"content\": \"{log}\"}}", System.Text.Encoding.UTF8, "application/json");
+            
+            var response = await _client.PostAsync("/api/DataInput", content);
+
             if (response.IsSuccessStatusCode)
             {
                 logsSentSuccessfully = true;
@@ -36,6 +40,12 @@ public class SendLogsToApi
                 System.Console.WriteLine(response.Headers);
                 System.Console.WriteLine(response.RequestMessage);
                 System.Console.WriteLine(response.Version);
+
+                if(response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                {
+                    System.Console.WriteLine("*** Unauthorized Access ***");
+                    break;
+                }
             }
         }
         if(logsSentSuccessfully)

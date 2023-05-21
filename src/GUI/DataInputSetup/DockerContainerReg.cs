@@ -68,12 +68,5 @@ public class DockerContainerReg
 
         // Process has exited, handle any remaining output data
         dockerLogProcess.CancelOutputRead();
-
-        // Handle any cleanup or additional logic after the process has exited
-        // ...
-
-        // Optionally, you can restart the process if needed
-        // ...
-
     }
 }
