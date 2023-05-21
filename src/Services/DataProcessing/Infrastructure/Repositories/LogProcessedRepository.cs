@@ -29,11 +29,7 @@ public class LogProcessedRepository : ILogProcessedRepository
             dtoList.Add( new LogQueryResultDto(log.Id, 
                                                log.MLType, 
                                                log.Timestamp, 
-                                               log.LogMessage, 
-                                               log.ExceptionType, 
-                                               log.Error, 
-                                               log.Warning, 
-                                               log.FaultyCodePlacement));
+                                               log.Error));
         }
         return dtoList;
     }
