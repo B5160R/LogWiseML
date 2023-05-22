@@ -15,11 +15,23 @@ services:
       - "5672:5672"
       - "15672:15672"
 
+  datainputgatewayapi:
+    image: datainputgatewayapi
+    build:
+      context: .
+      dockerfile: src\Gateways\DataInput\Dockerfile
+    ports:
+      - 5051:5051
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw
+
   dcapi:
     image: dcapi
     build:
       context: .
-      dockerfile: DataCollection/Dockerfile
+      dockerfile: src/Services/DataCollection/Dockerfile
     ports:
       - 5026:5026
     environment:
@@ -31,9 +43,21 @@ services:
     image: dpapi
     build:
       context: .
-      dockerfile: DataProcessing/Dockerfile
+      dockerfile: src/Services/DataProcessing/Dockerfile
     ports:
       - 5027:5027
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw
+
+  mlapi:
+    image: mlapi
+    build:
+      context: .
+      dockerfile: src/Services/ML/Dockerfile
+    ports:
+      - 5000:5000
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     volumes:
