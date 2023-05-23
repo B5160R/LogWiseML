@@ -9,32 +9,28 @@ namespace DataProcessing.API.Infrastructure.Producer;
 public class LogProducerAnalysis : IProducerAnalysis
 {
     private readonly ILogger<LogProducerAnalysis> _logger;
-    private readonly IPublishEndpoint _publishEndpoint;
-    private readonly IConvertToCSV<LogQueryResultDto> _convertToCSV;
-    private readonly IGetAllQuery<LogQueryResultDto> _getAllQuery;
+    private readonly HttpClient _httpClient;
 
     public LogProducerAnalysis(ILogger<LogProducerAnalysis> logger, 
-                                IPublishEndpoint publishEndpoint, 
-                                IConvertToCSV<LogQueryResultDto> convertToCSV,
-                                IGetAllQuery<LogQueryResultDto> getAllQuery)
+                                HttpClient httpClient)
     {
         _logger = logger;
-        _publishEndpoint = publishEndpoint;
-        _convertToCSV = convertToCSV;
-        _getAllQuery = getAllQuery;
+        _httpClient = httpClient;
     }
-    public async Task ProduceAsync()
+    public async Task ProduceAsync(string dto)
     {
         try
         {
-            var dtos = await _getAllQuery.GetAllAsync();
-            var csvdata = _convertToCSV.ConvertAsync(dtos);
-
-            // Send to Analysis API
-            await _publishEndpoint.Publish<LogCsv>(new
+            // Send to ML API for analysis
+            var response = await _httpClient.PostAsJsonAsync("/api/run/testmodel", dto);
+            if(response.IsSuccessStatusCode)
             {
-                Content = csvdata
-            });
+                _logger.LogInformation("Successfully sent data to Analysis API");
+            }
+            else
+            {
+                _logger.LogError("* Error while sending data to Analysis API");
+            }
         }
         catch (System.Exception ex)
         {

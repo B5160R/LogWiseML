@@ -29,7 +29,7 @@ public class LogProducerMLDataset : IProducerMLDataset
         {
             await Console.Out.WriteLineAsync($"Info: Sending log to MLTrainer API");
             var dtos = await _getAllQuery.GetAllAsync();
-            var dataset = await _convertToCSV.ConvertAsync(dtos);
+            var dataset = await _convertToCSV.ConvertListAsync(dtos);
 
             // Send to ML API
             var response = await _httpClient.PostAsJsonAsync("/api/dataset", dataset);

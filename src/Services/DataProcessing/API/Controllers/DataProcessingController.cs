@@ -30,7 +30,7 @@ public class DataProcessingController
     public async Task<string> GetAllAsCSV()
     {
         var dtos = await _getAllQuery.GetAllAsync();
-        return await _convertToCSV.ConvertAsync(dtos);
+        return await _convertToCSV.ConvertListAsync(dtos);
     }
 
     [HttpGet]
@@ -44,12 +44,5 @@ public class DataProcessingController
     public async Task SendToMLTrainer()
     {
         await _producerMLDataset.ProduceAsync();
-    }
-
-    [HttpGet]
-    [Route("analysis")]
-    public async Task SendToAnalysis()
-    {
-        await _producerAnalysis.ProduceAsync();
     }
 }

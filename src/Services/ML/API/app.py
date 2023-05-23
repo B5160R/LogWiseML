@@ -25,7 +25,9 @@ def dataset():
 
     return 'Dataset not found'
 
-# @app.route('/api/run-model', methods=['POST'])
-# def run_model():
-
-#     return 'Model ran successfully'
+@app.route('/api/run/testmodel', methods=['POST'])
+def run_model():
+    if request.method == 'POST':
+        return 'Test model ran successfully'
+    
+    return 'Error running test model'
