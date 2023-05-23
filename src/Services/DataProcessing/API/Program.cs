@@ -1,6 +1,6 @@
 using DataProcessing.Application.Commands.Interfaces;
-using DataProcessing.Application.Commands;
-using DataProcessing.Application.Dtos;
+using DataProcessing.Application.Commands.LogErrorTimeData;
+using DataProcessing.Application.Dtos.LogErrorTimeData;
 using DataProcessing.Application.Repositories;
 using DataProcessing.Database.Context;
 using DataProcessing.Infrastructure.Repositories;
@@ -44,15 +44,20 @@ builder.Services.AddMassTransit(x =>
 builder.Services.AddScoped<ILogProcessedRepository, LogProcessedRepository>();
 builder.Services.AddScoped<ICreateCommand<LogProcessRequestDto>, LogProcessedCreateCommand>();
 builder.Services.AddScoped<IGetAllQuery<LogQueryResultDto>, LogsGetAllQuery>();
-builder.Services.AddScoped<IConvertToCSV<LogQueryResultDto>, LogsConvertToCSV>();
+builder.Services.AddScoped<IConvertToCSV<LogQueryResultDto>, LogsDatasetConvertToCSV>();
+builder.Services.AddScoped<IConvertToCSV<LogSendToAnalysisDto>, LogsAnalysisConvertToCSV>();
+builder.Services.AddScoped<IPrepForAnalysis<LogProcessRequestDto>, LogPrepForAnalysis>();
 builder.Services.AddScoped<IProducerAnalysis, LogProducerAnalysis>();
 builder.Services.AddScoped<IProducerMLDataset, LogProducerMLDataset>();
 
 builder.Services.AddHttpClient<IProducerMLDataset, LogProducerMLDataset>(client =>
 {
-    client.BaseAddress = new Uri(builder.Configuration["MLDatasetAPI"]);
+    client.BaseAddress = new Uri(builder.Configuration["MLServiceAPI"]);
 });
-
+builder.Services.AddHttpClient<IProducerAnalysis, LogProducerAnalysis>(client =>
+{
+    client.BaseAddress = new Uri(builder.Configuration["MLServiceAPI"]);
+});
 
 
 var app = builder.Build();

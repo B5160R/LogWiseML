@@ -1,4 +1,4 @@
-namespace DataProcessing.Application.Dtos;
+namespace DataProcessing.Application.Dtos.LogErrorTimeData;
 public class LogQueryResultDto
 {
     public int Id { get; set; }

@@ -1,7 +1,7 @@
 using DataProcessing.API.Infrastructure.Producer.Interfaces;
 using DataProcessing.Application.Commands.Interfaces;
 using DataProcessing.Application.Queries.Interfaces;
-using DataProcessing.Application.Dtos;
+using DataProcessing.Application.Dtos.LogErrorTimeData;
 using MassTransit;
 
 namespace DataProcessing.API.Infrastructure.Producer;
@@ -29,7 +29,7 @@ public class LogProducerMLDataset : IProducerMLDataset
         {
             await Console.Out.WriteLineAsync($"Info: Sending log to MLTrainer API");
             var dtos = await _getAllQuery.GetAllAsync();
-            var dataset = await _convertToCSV.ConvertAsync(dtos);
+            var dataset = await _convertToCSV.ConvertListAsync(dtos);
 
             // Send to ML API
             var response = await _httpClient.PostAsJsonAsync("/api/dataset", dataset);

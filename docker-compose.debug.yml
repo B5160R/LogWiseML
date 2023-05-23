@@ -3,6 +3,16 @@
 version: '3.4'
 
 services:
+
+  mlapi:
+    image: mlapi
+    build:
+      context: .
+      dockerfile: src/Services/ML/Dockerfile
+    ports:
+      - 5000:5000
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw
   
   rabbitmq:
     image: rabbitmq:3.7-management
@@ -26,6 +36,8 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
     volumes:
       - ~/.vsdbg:/remote_debugger:rw
+    depends_on:
+      - rabbitmq
 
   dcapi:
     image: dcapi
@@ -38,6 +50,8 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
     volumes:
       - ~/.vsdbg:/remote_debugger:rw
+    depends_on:
+      - rabbitmq
 
   dpapi:
     image: dpapi
@@ -50,15 +64,6 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
     volumes:
       - ~/.vsdbg:/remote_debugger:rw
-
-  mlapi:
-    image: mlapi
-    build:
-      context: .
-      dockerfile: src/Services/ML/Dockerfile
-    ports:
-      - 5000:5000
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    volumes:
-      - ~/.vsdbg:/remote_debugger:rw
+    depends_on:
+      - rabbitmq
+      - mlapi
