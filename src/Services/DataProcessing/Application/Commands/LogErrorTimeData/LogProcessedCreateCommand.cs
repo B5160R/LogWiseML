@@ -1,9 +1,9 @@
 using DataProcessing.Domain.Models;
 using DataProcessing.Application.Commands.Interfaces;
-using DataProcessing.Application.Dtos;
+using DataProcessing.Application.Dtos.LogErrorTimeData;
 using DataProcessing.Application.Repositories;
 
-namespace DataProcessing.Application.Commands;
+namespace DataProcessing.Application.Commands.LogErrorTimeData;
 public class LogProcessedCreateCommand : ICreateCommand<LogProcessRequestDto>
 {
     private readonly ILogProcessedRepository _repository;

@@ -16,8 +16,7 @@ RUN pip install sklearn
 
 # Copy files
 COPY ["src/Services/ML/API", "/app/src"]
-COPY ["src/Services/ML/Data", "/app/Data"]
-COPY ["src/Services/ML/ModelTrainers", "/app/src"]
+COPY ["src/Services/ML/Models", "/app/Models"]
 
 WORKDIR /app/src
 

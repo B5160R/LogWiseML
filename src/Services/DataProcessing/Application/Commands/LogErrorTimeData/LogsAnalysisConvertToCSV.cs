@@ -1,9 +1,9 @@
-using DataProcessing.Application.Dtos;
+using DataProcessing.Application.Dtos.LogErrorTimeData;
 using DataProcessing.Application.Commands.Interfaces;
 using CsvHelper;
 using System.Globalization;
 
-namespace DataProcessing.Application.Commands;
+namespace DataProcessing.Application.Commands.LogErrorTimeData;
 public class LogsAnalysisConvertToCSV : IConvertToCSV<LogSendToAnalysisDto>
 {
     public async Task<string> ConvertAsync(LogSendToAnalysisDto dto)

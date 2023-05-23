@@ -1,6 +1,6 @@
 using DataProcessing.API.Infrastructure.Producer.Interfaces;
 using DataProcessing.Application.Commands.Interfaces;
-using DataProcessing.Application.Dtos;
+using DataProcessing.Application.Dtos.LogErrorTimeData;
 using MassTransit;
 using Shared.Models.Logs;
 

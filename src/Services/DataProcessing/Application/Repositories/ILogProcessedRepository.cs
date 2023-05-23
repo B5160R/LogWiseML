@@ -1,5 +1,5 @@
 using DataProcessing.Domain.Models;
-using DataProcessing.Application.Dtos;
+using DataProcessing.Application.Dtos.LogErrorTimeData;
 namespace DataProcessing.Application.Repositories;
 public interface ILogProcessedRepository
 {

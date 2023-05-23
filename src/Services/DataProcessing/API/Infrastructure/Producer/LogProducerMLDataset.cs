@@ -1,7 +1,7 @@
 using DataProcessing.API.Infrastructure.Producer.Interfaces;
 using DataProcessing.Application.Commands.Interfaces;
 using DataProcessing.Application.Queries.Interfaces;
-using DataProcessing.Application.Dtos;
+using DataProcessing.Application.Dtos.LogErrorTimeData;
 using MassTransit;
 
 namespace DataProcessing.API.Infrastructure.Producer;

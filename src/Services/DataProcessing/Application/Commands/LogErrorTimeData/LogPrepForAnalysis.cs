@@ -1,8 +1,8 @@
 using DataProcessing.Application.Commands.Interfaces;
-using DataProcessing.Application.Dtos;
+using DataProcessing.Application.Dtos.LogErrorTimeData;
 using DataProcessing.Domain.Models;
 
-namespace DataProcessing.Application.Commands;
+namespace DataProcessing.Application.Commands.LogErrorTimeData;
 public class LogPrepForAnalysis : IPrepForAnalysis<LogProcessRequestDto>
 {
     private readonly IConvertToCSV<LogSendToAnalysisDto> _convertToCSV;

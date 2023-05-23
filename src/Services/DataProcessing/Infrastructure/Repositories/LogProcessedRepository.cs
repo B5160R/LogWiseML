@@ -1,4 +1,4 @@
-using DataProcessing.Application.Dtos;
+using DataProcessing.Application.Dtos.LogErrorTimeData;
 using DataProcessing.Application.Repositories;
 using DataProcessing.Database.Context;
 using DataProcessing.Domain.Models;

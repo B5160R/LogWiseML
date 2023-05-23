@@ -1,6 +1,6 @@
 using DataProcessing.Application.Commands.Interfaces;
-using DataProcessing.Application.Commands;
-using DataProcessing.Application.Dtos;
+using DataProcessing.Application.Commands.LogErrorTimeData;
+using DataProcessing.Application.Dtos.LogErrorTimeData;
 using DataProcessing.Application.Repositories;
 using DataProcessing.Database.Context;
 using DataProcessing.Infrastructure.Repositories;
