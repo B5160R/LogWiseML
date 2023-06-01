@@ -14,7 +14,7 @@ public class LogProcessedCreateCommand : ICreateCommand<LogProcessRequestDto>
 
     public async Task CreateAsync(LogProcessRequestDto dto)
     {
-        var entityProcessed = new LogProcessedModel("MLType", dto.Content);
+        var entityProcessed = new LogProcessedModel("LogErrorTime", dto.Content);
 
         await _repository.CreateAsync(entityProcessed);
     }

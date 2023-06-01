@@ -50,10 +50,6 @@ models = {
     "Random Forest": RandomForestRegressor(),
     "Decision Tree": DecisionTreeRegressor(),
     "KNN": KNeighborsRegressor()
-    # "SVM": SVR(),
-    # "XGBoost": XGBRegressor(),
-    # "LGBM": LGBMRegressor(),
-    # "CatBoost": CatBoostRegressor()
 }
 
 # Create a function to fit and score models

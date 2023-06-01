@@ -43,4 +43,3 @@ plt.show()
 # Save the model to disk
 pickle.dump(regressor, open('../Data/Models/model.pkl', 'wb'))
 
-

@@ -12,10 +12,12 @@ public class LogPrepForAnalysis : IPrepForAnalysis<LogProcessRequestDto>
     }
     public async Task<string> Prep(LogProcessRequestDto dto)
     {
-        var logProcessedModel = new LogProcessedModel("Analysis", dto.Content);
+        var logProcessedModel = new LogProcessedModel("LogErrorTime_Analysis", dto.Content);
         var analysisDto = new LogSendToAnalysisDto();
         analysisDto.MLType = logProcessedModel.MLType;
         analysisDto.Timestamp = logProcessedModel.Timestamp;
+
+        System.Console.WriteLine($"Info: LogPrepForAnalysis: {analysisDto.MLType} {analysisDto.Timestamp}");
 
         var csvDto = await _convertToCSV.ConvertAsync(analysisDto);
         return csvDto;
