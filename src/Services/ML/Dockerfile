@@ -10,9 +10,9 @@ RUN pip install flask_restful
 RUN pip install pandas
 RUN pip install numpy
 RUN pip install matplotlib
-
-# RUN pip install pickle
-RUN pip install sklearn
+RUN pip install pika --upgrade
+RUN pip install numpy scipy scikit-learn
+RUN pip install -U scikit-learn
 
 # Copy files
 COPY ["src/Services/ML/API", "/app/src"]

@@ -8,9 +8,10 @@ public class LogsAnalysisConvertToCSV : IConvertToCSV<LogSendToAnalysisDto>
 {
     public async Task<string> ConvertAsync(LogSendToAnalysisDto dto)
     {
+        var dummylist = new List<LogSendToAnalysisDto>() { dto };
         using var writer = new StringWriter();
         using var csv = new CsvWriter(writer, CultureInfo.InvariantCulture);
-        csv.WriteRecord(dto);
+        await csv.WriteRecordsAsync(dummylist);
         return writer.ToString();
     }
 

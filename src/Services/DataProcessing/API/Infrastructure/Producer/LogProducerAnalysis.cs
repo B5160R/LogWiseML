@@ -22,6 +22,9 @@ public class LogProducerAnalysis : IProducerAnalysis
         try
         {
             // Send to ML API for analysis
+            Console.WriteLine("***********************");
+            Console.WriteLine(dto);
+            Console.WriteLine("***********************");
             var response = await _httpClient.PostAsJsonAsync("/api/run/testmodel", dto);
             if(response.IsSuccessStatusCode)
             {

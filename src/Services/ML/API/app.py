@@ -28,6 +28,22 @@ def dataset():
 @app.route('/api/run/testmodel', methods=['POST'])
 def run_model():
     if request.method == 'POST':
-        return 'Test model ran successfully'
+        # Get the string CSV data from the request
+        csv_data = request.data.decode('utf-8')
+        with open('analysistdata.csv', 'w') as f:
+            f.write(csv_data)
+
+        import runModel
+        
+        result = runModel.run()
+
+        #send result to rabbitmq queue
+        import pika
+        connection = pika.BlockingConnection(pika.ConnectionParameters(host='rabbitmq'))
+        channel = connection.channel()
+        channel.queue_declare(queue='log-error-time-model-result')
+        channel.basic_publish(exchange='', routing_key='log-error-time-model-result', body=result)
+        connection.close()
+        
     
     return 'Error running test model'
